@@ -16,22 +16,13 @@
             "interface_rede": "Não encontrado",
             "throughput": "Não encontrado",
             "protocolos": [
-                "RTP",
-                "UDP",
-                "RTP",
-                "UDP multicast",
-                "RTP",
-                "RTSP",
-                "TCP",
-                "RTP",
-                "RTSP",
                 "HTTP",
-                "TCP",
+                "HTTPS",
                 "RTP",
                 "RTSP",
-                "HTTPS",
                 "TCP",
-                "HTTP"
+                "UDP",
+                "UDP multicast"
             ],
             "onvif": "Não encontrado",
             "navegador": "Não encontrado"
@@ -79,18 +70,18 @@
             "interface_rede": "Não encontrado",
             "throughput": "64 Mbps",
             "protocolos": [
-                "IPv4",
-                "IPv6",
+                "DDNS",
+                "DNS",
+                "FTP",
                 "HTTP",
                 "HTTPS",
-                "Qos",
-                "FTP",
-                "SMTP",
-                "UPnP",
-                "DNS",
-                "DDNS",
+                "IPv4",
+                "IPv6",
                 "NTP",
-                "RTSP"
+                "Qos",
+                "RTSP",
+                "SMTP",
+                "UPnP"
             ],
             "onvif": "Não encontrado",
             "navegador": [
@@ -143,18 +134,18 @@
             "interface_rede": "Não encontrado",
             "throughput": "64 Mbps",
             "protocolos": [
-                "TCP",
-                "FTP",
-                "RTMP",
-                "IPv6",
+                "802.1x",
                 "Bonjour",
-                "IPv4",
                 "DNS",
-                "RTCP",
-                "PPPoE",
+                "FTP",
+                "IPv4",
+                "IPv6",
                 "NTP",
+                "PPPoE",
+                "RTCP",
+                "RTMP",
                 "RTP",
-                "802.1x"
+                "TCP"
             ],
             "onvif": "Não encontrado",
             "navegador": [
@@ -233,7 +224,7 @@
             }
         },
         "fabricante": "Intelbras",
-        "modelo_produto": "VIP 3400 MINI SD SC IA, VIP 3400 MINI SD SC IA FT",
+        "modelo_produto": "VIP 3400 MINI SD SC IA",
         "tags": [
             "Inteligência Artificial",
             "PoE",
@@ -708,16 +699,16 @@
             "interface_rede": "Não encontrado",
             "throughput": "Cabo",
             "protocolos": [
+                "ARP",
                 "HTTP",
                 "HTTPS",
-                "TCP",
-                "UDP",
-                "ARP",
-                "RTP",
-                "RTSP",
                 "RTCP",
                 "RTMP",
-                "SMTP"
+                "RTP",
+                "RTSP",
+                "SMTP",
+                "TCP",
+                "UDP"
             ],
             "onvif": "Não encontrado",
             "navegador": [
@@ -744,7 +735,7 @@
             }
         },
         "fabricante": "Intelbras",
-        "modelo_produto": "VIPW 1230 B VIPW 1230, VIPW 1230 B VIPW 1230, VIPW 1230 B/D - Incorpora produto homologado pela Anatel sob os",
+        "modelo_produto": "VIPW 1230 B VIPW 1230, VIPW 1230 B VIPW 1230, VIPW 1230 B/D - Incorpora produto homologado",
         "tags": [
             "Bullet",
             "Dome",
@@ -769,20 +760,20 @@
             "interface_rede": "Não encontrado",
             "throughput": "24 Mbps",
             "protocolos": [
+                "ARP",
+                "DHCP",
+                "DNS",
+                "FTP",
+                "HTTP",
                 "IPv4",
                 "IPv6",
-                "HTTP",
-                "TCP",
-                "UDP",
-                "ARP",
-                "RTP",
-                "RTSP",
                 "RTCP",
                 "RTMP",
+                "RTP",
+                "RTSP",
                 "SMTP",
-                "FTP",
-                "DHCP",
-                "DNS"
+                "TCP",
+                "UDP"
             ],
             "onvif": "Não encontrado",
             "navegador": [
@@ -810,7 +801,7 @@
             }
         },
         "fabricante": "Intelbras",
-        "modelo_produto": "VIP 1230 B G5, VIP 1230 B G5 VIP 1230 D, VIP 1230 D G5",
+        "modelo_produto": "VIP 1230 B G5, VIP 1230 B G5 VIP 1230, VIP 1230 D G5",
         "tags": [
             "Bullet",
             "Dome",
@@ -837,8 +828,8 @@
             "protocolos": [
                 "ARP",
                 "CGI",
-                "DHCP",
                 "DDNS",
+                "DHCP",
                 "DNS",
                 "FTP",
                 "Filtro IP",
@@ -873,7 +864,7 @@
             }
         },
         "fabricante": "Intelbras",
-        "modelo_produto": "VIP 1230 FC+ VIP 1230 D FC",
+        "modelo_produto": "VIP 1230 FC+ VIP 1230 D",
         "tags": [
             "Dome",
             "Full Color / Super Color",
@@ -899,22 +890,21 @@
             "interface_rede": "Não encontrado",
             "throughput": "20 Mbps",
             "protocolos": [
-                "IPv4",
-                "IPv6",
-                "HTTP",
-                "HTTPS",
-                "TCP",
-                "IP",
-                "RTSP",
-                "UDP",
-                "SMTP",
-                "NTP",
+                "ARP",
+                "DDNS",
                 "DHCP",
                 "DNS",
-                "DDNS",
-                "SSL",
                 "FTP",
-                "ARP"
+                "HTTP",
+                "HTTPS",
+                "IPv4",
+                "IPv6",
+                "NTP",
+                "RTSP",
+                "SMTP",
+                "SSL",
+                "TCP",
+                "UDP"
             ],
             "onvif": "Não encontrado",
             "navegador": [
@@ -989,7 +979,7 @@
             }
         },
         "fabricante": "Intelbras",
-        "modelo_produto": "VIP 1430 FC+ VIP 1430 D FC",
+        "modelo_produto": "VIP 1430 FC+ VIP 1430 D",
         "tags": [
             "Dome",
             "Full Color / Super Color",
@@ -1040,7 +1030,7 @@
             }
         },
         "fabricante": "Intelbras",
-        "modelo_produto": "VIP 1430 FC+ VIP 1430 D FC",
+        "modelo_produto": "VIP 1430 FC+ VIP 1430 D",
         "tags": [
             "Dome",
             "Full Color / Super Color",
@@ -1051,8 +1041,8 @@
     },
     "Datasheet VIP 3230 BD FC+ IA - 2.pdf": {
         "video": {
-            "resolucao_maxima": "2.1 MP (1920x1080)",
-            "pixels_efetivos": "2.1 MP (1920x1080)",
+            "resolucao_maxima": "0.0 MP (100x0)",
+            "pixels_efetivos": "0.0 MP (100x0)",
             "sensor_imagem": "1/2.8” 2 MP Progressive CMOS",
             "wdr": "120 dB)/ HLC",
             "compressao_video": "H.265/ H.264/H.264B/MJPEG",
@@ -1091,9 +1081,8 @@
             }
         },
         "fabricante": "Intelbras",
-        "modelo_produto": "VIP 3230 FC+ IA VIP 3230 D FC",
+        "modelo_produto": "VIP 3230 FC+ IA VIP 3230",
         "tags": [
-            "Dome",
             "Full Color / Super Color",
             "Full Color+",
             "Inteligência Artificial",
@@ -1118,20 +1107,20 @@
             "interface_rede": "Não encontrado",
             "throughput": "48 Mbps",
             "protocolos": [
-                "IPv4",
-                "IPv6",
+                "ARP",
+                "FTP",
                 "HTTP",
                 "HTTPS",
-                "TCP",
-                "UDP",
-                "ARP",
-                "RTP",
-                "RTSP",
+                "IPv4",
+                "IPv6",
                 "RTCP",
                 "RTMP",
+                "RTP",
+                "RTSP",
+                "SFTP",
                 "SMTP",
-                "FTP",
-                "SFTP"
+                "TCP",
+                "UDP"
             ],
             "onvif": "Não encontrado",
             "navegador": [
@@ -1167,8 +1156,8 @@
     },
     "datasheet-vip-3230-fc+-ia-vip-3230-d-fc+-ia-pt.pdf": {
         "video": {
-            "resolucao_maxima": "2.1 MP (1920x1080)",
-            "pixels_efetivos": "2.1 MP (1920x1080)",
+            "resolucao_maxima": "0.0 MP (100x0)",
+            "pixels_efetivos": "0.0 MP (100x0)",
             "sensor_imagem": "1/2.8” 2 MP Progressive CMOS",
             "wdr": "120 dB)/ HLC",
             "compressao_video": "H.265/ H.264/H.264B/MJPEG",
@@ -1207,9 +1196,8 @@
             }
         },
         "fabricante": "Intelbras",
-        "modelo_produto": "VIP 3230 FC+ IA VIP 3230 D FC",
+        "modelo_produto": "VIP 3230 FC+ IA VIP 3230",
         "tags": [
-            "Dome",
             "Full Color / Super Color",
             "Full Color+",
             "Inteligência Artificial",
@@ -1219,8 +1207,8 @@
     },
     "Datasheet-VIP-3430-W-3430-D-W-02.20.pdf": {
         "video": {
-            "resolucao_maxima": "4.1 MP (2688x1520)",
-            "pixels_efetivos": "4.1 MP (2688x1520)",
+            "resolucao_maxima": "0.0 MP (100x0)",
+            "pixels_efetivos": "0.0 MP (100x0)",
             "sensor_imagem": "1/3” 4 megapixels CMOS",
             "wdr": "/ HLC",
             "compressao_video": "H.264/H.264B/H.265/H.265/MJPEG",
@@ -1259,7 +1247,7 @@
             }
         },
         "fabricante": "Intelbras",
-        "modelo_produto": "VIP 3430 W VIP 3430 D, VIP 3430 W VIP 3430 D W Sistema operacional Linux",
+        "modelo_produto": "VIP 3430 W VIP 3430 D",
         "tags": [
             "Dome",
             "PoE"
@@ -1308,7 +1296,7 @@
             }
         },
         "fabricante": "Intelbras",
-        "modelo_produto": "VIP 5200 TM, VIP 5200 TM FT, VIP 5203 TM FT, VIP 5203 TM FT VIP 5207 TM FT VIP 5210 TM FT 0.5 m 1.0 m 2.0 m DRI2 Segundo, VIP 5203 TM FT VIP 5207 TM FT VIP 5210 TM FT 1, VIP 5203 TM FT VIP 5207 TM FT VIP 5210 TM FT 1m 2.5m 2.5m Zoom digital 16x Controle do foco Fixo AGC, VIP 5203 TM FT VIP 5207 TM FT VIP 5210 TM FT 3, VIP 5203 TM FT VIP 5207 TM FT VIP 5210 TM FT Detectar, VIP 5203 TM FT VIP 5207 TM FT VIP 5210 TM FT F1.6 F2.0 F2.0, VIP 5203 TM FT VIP 5207 TM FT VIP 5210 TM FT H, VIP 5203 TM FT VIP 5207 TM FT VIP 5210 TM FT Humanos, VIP 5207 TM FT, VIP 5210 TM FT",
+        "modelo_produto": "VIP 5200 TM, VIP 5200 TM FT, VIP 5203 TM FT, VIP 5203 TM FT VIP 5207, VIP 5207 TM FT, VIP 5210 TM FT, VIP 5210 TM FT 0.5 m, VIP 5210 TM FT 1, VIP 5210 TM FT 1m 2.5m, VIP 5210 TM FT 3, VIP 5210 TM FT Detectar, VIP 5210 TM FT F1.6 F2.0, VIP 5210 TM FT H, VIP 5210 TM FT Humanos",
         "tags": [
             "PoE"
         ],
@@ -1356,7 +1344,7 @@
             }
         },
         "fabricante": "Intelbras",
-        "modelo_produto": "VIP 5450 D 4G IA, VIP 5450 D 4G IA FT, VIP 5450 D 4G IA FT Incorpora produto homologado pela Anatel sob o",
+        "modelo_produto": "VIP 5450 D 4G IA, VIP 5450 D 4G IA FT",
         "tags": [
             "Dome",
             "Inteligência Artificial",
@@ -1412,7 +1400,7 @@
             "PoE",
             "Speed Dome"
         ],
-        "distancia_focal": "4 mm (Fixa)"
+        "distancia_focal": "191.4 mm (Fixa)"
     },
     "datasheet-vip-93200-lpr-ia-ft-g2-pt.pdf": {
         "video": {
@@ -1552,7 +1540,7 @@
             }
         },
         "fabricante": "Intelbras",
-        "modelo_produto": "VIPM 9414, VIPM 9414 3D fornece imagem de",
+        "modelo_produto": "VIPM 9414, VIPM 9414 3D",
         "tags": [
             "PoE"
         ],
@@ -1575,20 +1563,20 @@
             "interface_rede": "Não encontrado",
             "throughput": "229 Mbps",
             "protocolos": [
-                "IPv4",
-                "IPv6",
-                "HTTPS",
-                "SMTP",
-                "TCP",
-                "UDP",
                 "ARP",
-                "RTP",
-                "RTSP",
-                "RTCP",
+                "DDNS",
                 "DHCP",
                 "DNS",
-                "DDNS",
-                "NTP"
+                "HTTPS",
+                "IPv4",
+                "IPv6",
+                "NTP",
+                "RTCP",
+                "RTP",
+                "RTSP",
+                "SMTP",
+                "TCP",
+                "UDP"
             ],
             "onvif": "Não encontrado",
             "navegador": [
@@ -1615,7 +1603,7 @@
             }
         },
         "fabricante": "Intelbras",
-        "modelo_produto": "VIPW 1210, VIPW 1210 C - Incorpora produto homologado pela Anatel sob os",
+        "modelo_produto": "VIPW 1210, VIPW 1210 C - Incorpora produto homologado",
         "tags": [
             "PoE"
         ],
@@ -1625,32 +1613,56 @@
         "video": {
             "resolucao_maxima": "8.3 MP (3840x2160)",
             "pixels_efetivos": "8.3 MP (3840x2160)",
-            "compressao_video": "compression technology",
-            "resolucao": "Não encontrado",
-            "fps": "Não encontrado"
+            "sensor_imagem": "1/2.8\" Progressive Scan CMOS",
+            "wdr": "Não encontrado",
+            "compressao_video": "Main stream: H.265/H.264/H.264+/H.265+",
+            "taxa_de_bits": "32 Kbps to 16 Mbps"
         },
-        "audio": {},
+        "audio": {
+            "microfone_embutido": "Não encontrado",
+            "compressao_audio": "G.711ulaw/G.711alaw/G.722.1/G.726/MP2L2/PCM/MP3/AAC-LC"
+        },
         "rede": {
-            "interface_rede": "SNMP, WebSocket",
-            "throughput": "H.264 Type",
-            "protocolos": "Não encontrado",
-            "onvif": "Não encontrado",
+            "interface_rede": "1 RJ45 10 M/100 M self-adaptive Ethernet port",
+            "protocolos": [
+                "DDNS",
+                "DHCP",
+                "DNS",
+                "FTP",
+                "HTTP",
+                "HTTPS",
+                "ICMP",
+                "NTP",
+                "RTP",
+                "RTSP",
+                "SMTP",
+                "TCP",
+                "UPnP"
+            ],
             "navegador": [
-                "ncy and effectiveness"
+                "Plug-in required live view: IE 10",
+                "IE 11"
             ]
         },
         "inteligencia": {
-            "line_crossing": "Sim",
-            "intrusion": "Sim",
-            "people_counting": "Não",
-            "face_detection": "Sim"
+            "deteccao_movimento": "Motion detection (human and vehicle targets classification), video tampering alarm",
+            "protecao_perimetral": "Line crossing detection, intrusion detection",
+            "regiao_interesse": "1 fixed region for main stream and sub-stream"
         },
         "energia": {
-            "alimentacao": "SNMP, WebSocket"
+            "tensao_alimentacao": "12 VDC ± 25%, reverse polarity protection",
+            "consumo_potencia": "12 VDC, 0.92 A, max. 11.04 W"
         },
         "fisico": {
-            "grau_protecao": "and vandal-resistant",
-            "dimensoes": "Não encontrado"
+            "grau_protecao": "IP67",
+            "dimensoes": "216 mm × 121 mm × 118 mm",
+            "peso": "Não encontrado",
+            "temperatura_operacao": {
+                "min": -30,
+                "max": 60,
+                "unidade": "°C"
+            },
+            "distancia_ir": "Não encontrado"
         },
         "fabricante": "Hikvision",
         "modelo_produto": "DS-2CD2H83G2-IZS",
@@ -1658,38 +1670,63 @@
             "Detecção Facial",
             "PoE"
         ],
-        "distancia_focal": "12 mm (Fixa)"
+        "distancia_focal": "2.8 mm - 12 mm (Varifocal)"
     },
     "DS-2CD2T47G3-LIS2UY_SLRB_Datasheet_20250411.pdf": {
         "video": {
             "resolucao_maxima": "4.1 MP (2688x1520)",
             "pixels_efetivos": "4.1 MP (2688x1520)",
-            "compressao_video": "Não encontrado",
-            "resolucao": "Não encontrado",
-            "fps": "Não encontrado"
+            "sensor_imagem": "1/1.8\" Progressive Scan CMOS",
+            "wdr": "130 dB",
+            "compressao_video": "Main stream: H.265/H.264/H.264+/H.265+",
+            "taxa_de_bits": "32 Kbps to 8 Mbps"
         },
-        "audio": {},
+        "audio": {
+            "microfone_embutido": "Arrayed dual-microphone",
+            "compressao_audio": "G.711/G.722.1/G.726/MP2L2/PCM/MP3/AAC-LC"
+        },
         "rede": {
-            "interface_rede": "SNMP",
-            "throughput": "H.264 Type",
-            "protocolos": "Não encontrado",
-            "onvif": "Não encontrado",
+            "interface_rede": "1 RJ45 10 M/100 M self-adaptive Ethernet port",
+            "protocolos": [
+                "DDNS",
+                "DHCP",
+                "DNS",
+                "FTP",
+                "HTTP",
+                "HTTPS",
+                "ICMP",
+                "NTP",
+                "RTCP",
+                "RTP",
+                "RTSP",
+                "TCP",
+                "UPnP"
+            ],
             "navegador": [
-                "ndly lighting. F1.0 super-aperture collects more light to produce brighter images. Advanced sensor technology can vastly"
+                "Plug-in free live view: Chrome 80+",
+                "Firefox 80+",
+                "Edge 89+"
             ]
         },
         "inteligencia": {
-            "line_crossing": "Não",
-            "intrusion": "Não",
-            "people_counting": "Não",
-            "face_detection": "Não"
+            "deteccao_movimento": "Motion detection (support alarm triggering by specified target types (human and",
+            "protecao_perimetral": "Line crossing, intrusion, region entrance, region exiting",
+            "regiao_interesse": "1 fixed region for main stream"
         },
         "energia": {
-            "alimentacao": "SNMP"
+            "tensao_alimentacao": "Não encontrado",
+            "consumo_potencia": "Não encontrado"
         },
         "fisico": {
-            "grau_protecao": "IEC 60529-2013",
-            "dimensoes": "Não encontrado"
+            "grau_protecao": "IP67",
+            "dimensoes": "286.7 mm × 93.3 mm × 91.2 mm",
+            "peso": "Não encontrado",
+            "temperatura_operacao": {
+                "min": -30,
+                "max": 60,
+                "unidade": "°C"
+            },
+            "distancia_ir": "Up to 60 m"
         },
         "fabricante": "Hikvision",
         "modelo_produto": "DS-2CD2T47G3-LIS2UY",
@@ -1702,32 +1739,57 @@
         "video": {
             "resolucao_maxima": "5.8 MP (3200x1800)",
             "pixels_efetivos": "5.8 MP (3200x1800)",
-            "compressao_video": "Não encontrado",
-            "resolucao": "Não encontrado",
-            "fps": "Não encontrado"
+            "sensor_imagem": "1/1.8\" Progressive Scan CMOS",
+            "wdr": "130 dB",
+            "compressao_video": "Main stream: H.265/H.264/H.264+/H.265+",
+            "taxa_de_bits": "32 Kbps to 16 Mbps"
         },
-        "audio": {},
+        "audio": {
+            "microfone_embutido": "Arrayed dual-microphone",
+            "compressao_audio": "G.711/G.722.1/G.726/MP2L2/PCM/MP3/AAC-LC"
+        },
         "rede": {
-            "interface_rede": "SNMP",
-            "throughput": "H.264 Type",
-            "protocolos": "Não encontrado",
-            "onvif": "Não encontrado",
+            "interface_rede": "1 RJ45 10 M/100 M self-adaptive Ethernet port",
+            "protocolos": [
+                "DDNS",
+                "DHCP",
+                "DNS",
+                "FTP",
+                "HTTP",
+                "HTTPS",
+                "ICMP",
+                "NTP",
+                "RTCP",
+                "RTP",
+                "RTSP",
+                "TCP",
+                "UPnP"
+            ],
             "navegador": [
-                "ndly lighting. F1.0 super-aperture collects more light to produce brighter images. Advanced sensor technology can vastly"
+                "Plug-in free live view: Chrome 80+",
+                "Firefox 80+",
+                "Edge 89+"
             ]
         },
         "inteligencia": {
-            "line_crossing": "Não",
-            "intrusion": "Não",
-            "people_counting": "Não",
-            "face_detection": "Não"
+            "deteccao_movimento": "Motion detection (support alarm triggering by specified target types (human and",
+            "protecao_perimetral": "Line crossing, intrusion, region entrance, region exiting",
+            "regiao_interesse": "1 fixed region for main stream"
         },
         "energia": {
-            "alimentacao": "SNMP"
+            "tensao_alimentacao": "Não encontrado",
+            "consumo_potencia": "Não encontrado"
         },
         "fisico": {
-            "grau_protecao": "IEC 60529-2013",
-            "dimensoes": "Não encontrado"
+            "grau_protecao": "IP67",
+            "dimensoes": "286.7 mm × 93.3 mm × 91.2 mm",
+            "peso": "Não encontrado",
+            "temperatura_operacao": {
+                "min": -30,
+                "max": 60,
+                "unidade": "°C"
+            },
+            "distancia_ir": "Up to 60 m"
         },
         "fabricante": "Hikvision",
         "modelo_produto": "DS-2CD2T67G3-LIS2UY",
@@ -1740,43 +1802,67 @@
         "video": {
             "resolucao_maxima": "3.7 MP (2560x1440)",
             "pixels_efetivos": "3.7 MP (2560x1440)",
-            "compressao_video": "Não encontrado",
-            "resolucao": "Não encontrado",
-            "fps": "Não encontrado"
+            "sensor_imagem": "1/2.8\" progressive scan CMOS",
+            "wdr": "120 dB",
+            "compressao_video": "Specification",
+            "taxa_de_bits": "32 kbps to 16384 kbps"
         },
-        "audio": {},
+        "audio": {
+            "microfone_embutido": "Não encontrado",
+            "compressao_audio": "G.711,G.722.1,G.726,MP2L2,PCM,MP3,AAC-LC"
+        },
         "rede": {
-            "interface_rede": "Bonjour",
-            "throughput": "Não encontrado",
-            "protocolos": "Não encontrado",
-            "onvif": "Não encontrado",
+            "interface_rede": "1 RJ45 10M/100M self-adaptive Ethernet port",
+            "protocolos": [
+                "802.1x",
+                "DDNS",
+                "DNS",
+                "FTP",
+                "HTTP",
+                "HTTPS",
+                "IPv4",
+                "IPv6",
+                "NTP",
+                "QoS",
+                "RTSP",
+                "SMTP",
+                "SNMP",
+                "UPnP"
+            ],
             "navegador": [
-                "s of cameras can be widely used for wide ranges of high-definition",
-                "such as the rivers",
-                "roads",
-                "railways",
-                "airports"
+                "IE11",
+                "Chrome 80+",
+                "Firefox 80+",
+                "Safari 13+",
+                "Edge 89+"
             ]
         },
         "inteligencia": {
-            "line_crossing": "Sim",
-            "intrusion": "Sim",
-            "people_counting": "Não",
-            "face_detection": "Não"
+            "deteccao_movimento": "Motion detection, video tampering alarm, exception, alarm input and output",
+            "protecao_perimetral": "",
+            "regiao_interesse": "8 fixed regions for each stream"
         },
         "energia": {
-            "alimentacao": "Bonjour"
+            "tensao_alimentacao": "Não encontrado",
+            "consumo_potencia": "Não encontrado"
         },
         "fisico": {
-            "grau_protecao": "IEC 60529-2013),TVS 6000 V lightning protection, surge protection and voltage",
-            "dimensoes": "Não encontrado"
+            "grau_protecao": "IP67",
+            "dimensoes": "Não encontrado",
+            "peso": "Não encontrado",
+            "temperatura_operacao": {
+                "min": null,
+                "max": null,
+                "unidade": "°C"
+            },
+            "distancia_ir": "IR Distance: up to 100 m"
         },
         "fabricante": "Hikvision",
-        "modelo_produto": "Não encontrado",
+        "modelo_produto": "DS-2DE4415IW-DE, DS-2DE4415IWG-E",
         "tags": [
             "PoE"
         ],
-        "distancia_focal": "72 mm (Fixa)"
+        "distancia_focal": "4.8 mm - 72 mm (Varifocal)"
     },
     "exemplo.pdf": {
         "video": {
@@ -1893,8 +1979,8 @@
     },
     "Ficha técnica- VIP 3230 D FC+ AP IA (1) 1.pdf": {
         "video": {
-            "resolucao_maxima": "2.1 MP (1920x1080)",
-            "pixels_efetivos": "2.1 MP (1920x1080)",
+            "resolucao_maxima": "0.0 MP (100x0)",
+            "pixels_efetivos": "0.0 MP (100x0)",
             "sensor_imagem": "1/2.8” 2 MP Progressive CMOS",
             "wdr": "120 dB)/ HLC",
             "compressao_video": "H.265/ H.264/H.264B/H.264H/MJPEG",
@@ -1933,7 +2019,7 @@
             }
         },
         "fabricante": "Intelbras",
-        "modelo_produto": "VIP 3230 D FC+ AP IA VIP 3230 FC+ AP IA 44 m 53, VIP 3230 FC+ AP IA VIP 3230 D FC+ AP",
+        "modelo_produto": "VIP 3230 D FC+ AP IA, VIP 3230 FC+ AP IA 44, VIP 3230 FC+ AP IA VIP",
         "tags": [
             "Dome",
             "Full Color / Super Color",
@@ -1946,8 +2032,8 @@
     },
     "Ficha técnica- VIP 3230 D SC IA_0_0.pdf": {
         "video": {
-            "resolucao_maxima": "2.1 MP (1920x1080)",
-            "pixels_efetivos": "2.1 MP (1920x1080)",
+            "resolucao_maxima": "0.0 MP (100x0)",
+            "pixels_efetivos": "0.0 MP (100x0)",
             "sensor_imagem": "1/2.9” 2 MP Progressive CMOS",
             "wdr": "120 dB)/ HLC",
             "compressao_video": "H.265/ H.264/H.264B/H.264H/MJPEG",
@@ -1986,7 +2072,7 @@
             }
         },
         "fabricante": "Intelbras",
-        "modelo_produto": "VIP 3230 D SC IA VIP 3230 SC IA 47, VIP 3230 SC IA VIP 3230 D SC",
+        "modelo_produto": "VIP 3230 D SC IA VIP, VIP 3230 SC IA VIP 3230",
         "tags": [
             "Dome",
             "Inteligência Artificial",
@@ -2044,7 +2130,7 @@
             "PoE",
             "Speed Dome"
         ],
-        "distancia_focal": "Não encontrado"
+        "distancia_focal": "154 mm (Fixa)"
     },
     "Novo Datasheet - VIP 9180 Pan+ FT.pdf": {
         "video": {

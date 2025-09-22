@@ -1,4 +1,4 @@
-# analisador.py (Versão 9.4 - Leitor Hiki Supremo)
+# analisador.py (Versão Definitiva)
 import os
 import fitz
 import re
@@ -26,16 +26,13 @@ def clean_value(text):
     lixo = [
         "intelbras.com", "www.hikvision.com", "avigilon.com",
         "Material do case", "Inteligência Artificial", "L × A × P",
-        "As VIPs Intelbras", "Informações sujeitas a alterações"
+        "As VIPs Intelbras", "Informações sujeitas a alterações",
+        "Incorpora produto homologado pela Anatel sob os",
+        "fornece imagem de"
     ]
     for l in lixo:
         text = text.split(l)[0]
     return re.sub(r'\s+', ' ', text).strip(" :–;,.()")
-
-def limitar_valor(valor, limite=100):
-    if not valor:
-        return ""
-    return valor[:limite].strip()
 
 # =========================
 # Funções de busca
@@ -61,7 +58,8 @@ def buscar_valor(texto, padrao):
 def normalizar_resolucao(valor):
     if not valor:
         return "Não encontrado"
-    match = re.search(r"(\d{3,4})\s*[xX×]\s*(\d{3,4})", valor)
+    # >>> CORREÇÃO FINAL <<< Regex mais robusto para aceitar quebras de linha
+    match = re.search(r"(\d{3,4})\s*[xX×\n\s]*\s*(\d{3,4})", valor)
     if match:
         w, h = map(int, match.groups())
         mp = round((w * h) / 1_000_000, 1)
@@ -69,87 +67,55 @@ def normalizar_resolucao(valor):
     return clean_value(valor)
 
 def normalizar_peso(valor):
-    if not valor:
-        return "Não encontrado"
+    if not valor: return "Não encontrado"
     num_search = re.search(r"(\d[\d,.]*)", valor)
-    if not num_search:
-        return "Não encontrado"
+    if not num_search: return "Não encontrado"
     num_str = num_search.group(1).replace(",", ".")
     try:
         parts = num_str.split('.')
-        if len(parts) > 2:
-            num_str = "".join(parts[:-1]) + "." + parts[-1]
+        if len(parts) > 2: num_str = "".join(parts[:-1]) + "." + parts[-1]
         num = float(num_str)
-    except ValueError:
-        return "Não encontrado"
-    if "kg" in valor.lower():
-        return f"{int(num * 1000)} g"
-    if "lb" in valor.lower():
-        return f"{int(num * 453.6)} g"
-    if "g" in valor.lower():
-        return f"{int(num)} g"
+        if "kg" in valor.lower(): return f"{int(num * 1000)} g"
+        if "lb" in valor.lower(): return f"{int(num * 453.6)} g"
+        if "g" in valor.lower(): return f"{int(num)} g"
+    except ValueError: return "Não encontrado"
     return "Não encontrado"
 
 def normalizar_lente(valor):
-    if not valor:
-        return "Não encontrado"
+    if not valor: return "Não encontrado"
     v = valor.replace(",", ".").lower().strip()
-    m_range = re.search(r"(\d+\.?\d*)\s*mm\s*(?:to|-|~|até)\s*(\d+\.?\d*)\s*mm", v)
-    if m_range:
-        return f"{m_range.group(1)} mm - {m_range.group(2)} mm (Varifocal)"
+    m_range = re.search(r"(\d+\.?\d*)\s*(?:mm)?\s*(?:to|-|~|até)\s*(\d+\.?\d*)\s*mm", v)
+    if m_range: return f"{m_range.group(1)} mm - {m_range.group(2)} mm (Varifocal)"
     m_fixed = re.search(r"(\d+\.?\d*)\s*mm", v)
-    if m_fixed:
-        return f"{m_fixed.group(1)} mm (Fixa)"
+    if m_fixed: return f"{m_fixed.group(1)} mm (Fixa)"
     return valor
 
 def normalizar_temperatura(valor):
-    if not valor:
-        return {"min": None, "max": None, "unidade": "°C"}
-    nums = re.findall(r"-?\d{1,3}", valor)
-    if len(nums) >= 2:
-        return {"min": int(nums[0]), "max": int(nums[1]), "unidade": "°C"}
-    elif len(nums) == 1:
-        return {"min": int(nums[0]), "max": None, "unidade": "°C"}
-    return {"min": None, "max": None, "unidade": "°C"}
+    if not valor: return {"min": None, "max": None, "unidade": "°C"}
+    temp_part = valor.split('/')[0]
+    nums = [int(n) for n in re.findall(r'-?\d+', temp_part)]
+    if not nums: return {"min": None, "max": None, "unidade": "°C"}
+    min_temp, max_temp = (min(nums), max(nums)) if len(nums) > 1 else (nums[0], nums[0])
+    if '°F' in valor or 'Fahrenheit' in valor:
+        min_temp = int((min_temp - 32) * 5/9)
+        max_temp = int((max_temp - 32) * 5/9)
+    return {"min": min_temp, "max": max_temp, "unidade": "°C"}
 
 def normalizar_protocolos(valor):
-    if not valor:
-        return []
-    candidatos = re.split(r"[;,/]", valor)
-    return [clean_value(v) for v in candidatos if v.strip()]
+    if not valor: return []
+    candidatos = re.split(r'[;,/]', valor)
+    return sorted(set([clean_value(v) for v in candidatos if v.strip() and len(v) > 2]))
 
 def normalizar_navegadores(valor):
-    if not valor:
-        return []
-    candidatos = re.split(r"[;,/]", valor)
+    if not valor: return []
+    candidatos = re.split(r"[,;/]", valor)
     return [v.strip() for v in candidatos if v.strip()]
 
-def normalizar_compressao_video(valor):
-    if not valor:
-        return "Não encontrado"
-    return ", ".join([v.strip() for v in re.split(r"[;,/]", valor) if v.strip()])
-
-def normalizar_distancia_ir(valor):
-    if not valor:
-        return "Não encontrado"
-    match = re.search(r"(\d+)\s*m", valor)
-    return f"{match.group(1)} m" if match else "Não encontrado"
-
 # =========================
-# Tags por padrão no nome do modelo
+# Tags
 # =========================
 TAGS_POR_SIGLA = {
-    "LPR": "Leitura de Placas",
-    "SD": "Speed Dome",
-    "SC": "Super Color",
-    "FC": "Full Color / Super Color",
-    "FC+": "Full Color+",
-    "IA": "Inteligência Artificial",
-    "D": "Dome",
-    "B": "Bullet",
-    "PAN": "Panorâmica",
-    "PTZ": "Motorizada",
-    "STARVIS": "Sensor STARVIS"
+    "LPR": "Leitura de Placas","SD": "Speed Dome","SC": "Super Color","FC": "Full Color / Super Color","FC+": "Full Color+","IA": "Inteligência Artificial","D": "Dome","B": "Bullet","PAN": "Panorâmica","PTZ": "Motorizada","STARVIS": "Sensor STARVIS"
 }
 
 def extrair_tags_por_nome(modelo, texto):
@@ -157,173 +123,97 @@ def extrair_tags_por_nome(modelo, texto):
     for sigla, significado in TAGS_POR_SIGLA.items():
         if re.search(rf"(?:\b|[-_+]){sigla}(?:\b|[-_+])", modelo, re.IGNORECASE):
             tags.append(significado)
-    extras = {
-        "PoE": "PoE",
-        "SMD": "Smart Motion Detection",
-        "Face Detection": "Detecção Facial",
-        "People Counting": "Contagem de Pessoas",
-    }
+    extras = {"PoE": "PoE", "SMD": "Smart Motion Detection", "Face Detection": "Detecção Facial", "People Counting": "Contagem de Pessoas"}
     for termo, significado in extras.items():
         if termo.lower() in texto.lower():
             tags.append(significado)
     return sorted(set(tags))
 
 # =========================
-# Padrões por categoria
+# Padrões
 # =========================
 PATTERNS = {
-    "video": {
-        "sensor_imagem": r"(?:Sensor de imagem|Image Sensor|Image Device)",
-        "wdr": r"(?:WDR|Wide Dynamic Range|DWDR|120 dB WDR)",
-        "compressao_video": r"(?:Compressão de vídeo|Video Compression)",
-        "taxa_de_bits": r"(?:Taxa de bits|Video Bit Rate|Bitrate|Data rate|Stream Rate)",
-    },
-    "audio": {
-        "microfone_embutido": r"(?:Microfone embutido|Built-in Microphone)",
-        "compressao_audio": r"(?:Compressão de áudio|Audio Compression)",
-    },
-    "rede": {
-        "interface_rede": r"(?:Interface de rede|Ethernet Interface|Network Interface|\bLAN\b)",
-        "throughput": r"(?:Throughput Máximo|Max\. Throughput|Throughput)",
-        "protocolos": r"(?:Protocolos e serviços suportados|Protocols|Supported Protocols)",
-        "onvif": r"\b(Onvif|Open Network Video Interface)\b",
-        "navegador": r"(?:Navegador|Web Browser|Browser)",
-    },
-    "inteligencia": {
-        "deteccao_movimento": r"(?:Detecção de movimento|Motion detection|Basic Event)",
-        "regiao_interesse": r"(?:Região de interesse|Region of Interest|\bROI\b)",
-        "protecao_perimetral": r"(?:Proteção Perimetral|Perimeter Protection|Intrusion|Line crossing)",
-    },
-    "energia": {
-        "tensao_alimentacao": r"(?:Alimentação|Power Supply|Power Source)",
-        "consumo_potencia": r"(?:Consumo|Power Consumption\b)",
-    },
-    "fisico": {
-        "peso": r"\b(Peso|Weight)\b",
-        "temperatura_operacao": r"(?:Temperatura de operação|Operating Conditions|Environment)",
-    }
+    "video": {"sensor_imagem": r"(?:Sensor de imagem|Image Sensor|Image Device)","wdr": r"(?:WDR|Wide Dynamic Range|DWDR|120 dB WDR)","compressao_video": r"(?:Compressão de vídeo|Video Compression)","taxa_de_bits": r"(?:Taxa de bits|Video Bit Rate|Bitrate|Data rate|Stream Rate)",},"audio": {"microfone_embutido": r"(?:Microfone embutido|Built-in Microphone)","compressao_audio": r"(?:Compressão de áudio|Audio Compression)",},"rede": {"interface_rede": r"(?:Interface de rede|Ethernet Interface|Network Interface|\bLAN\b)","throughput": r"(?:Throughput Máximo|Max\. Throughput|Throughput)","protocolos": r"(?:Protocolos e serviços suportados|Protocols|Supported Protocols)","onvif": r"\b(Onvif|Open Network Video Interface)\b","navegador": r"(?:Navegador|Web Browser|Browser)",},"inteligencia": {"deteccao_movimento": r"(?:Detecção de movimento|Motion detection|Basic Event)","regiao_interesse": r"(?:Região de interesse|Region of Interest|\bROI\b)","protecao_perimetral": r"(?:Proteção Perimetral|Perimeter Protection|Intrusion|Line crossing)",},"energia": {"tensao_alimentacao": r"(?:Alimentação|Power Supply|Power Source)","consumo_potencia": r"(?:Consumo|Power Consumption and Current|\bPower Consumption\b)",},"fisico": {"peso": r"\b(Peso|Weight)\b","temperatura_operacao": r"(?:Temperatura de operação|Operating Conditions|Environment)",}
 }
 
-# =========================
-# Padrões Hikvision (em inglês)
-# =========================
-PATTERNS_HIKVISION = {
-    "video": {
-        "compressao_video": r"(?:H\.265\+|H\.265|H\.264\+|H\.264|MJPEG)",
-        "resolucao": r"(\d{3,4}\s*[xX×]\s*\d{3,4})",
-        "fps": r"(\d+\s*fps)"
-    },
-    "rede": {
-        "interface_rede": r"(?:RJ-45|Ethernet|Network Interface|PoE)",
-        "throughput": r"(?:Max\. Throughput|Mbps)",
-        "protocolos": r"(?:TCP/IP|UDP|HTTP|HTTPS|DHCP|DNS|NTP|ONVIF|RTSP|RTP)",
-        "onvif": r"\b(Onvif|Open Network Video Interface)\b",
-        "navegador": r"(?:Web Browser|IE|Chrome|Firefox)"
-    },
-    "inteligencia": {
-        "line_crossing": r"(?:Line Crossing Detection)",
-        "intrusion": r"(?:Intrusion Detection)",
-        "people_counting": r"(?:People Counting)",
-        "face_detection": r"(?:Face Detection)"
-    },
-    "energia": {
-        "alimentacao": r"(?:12 VDC|PoE|PoE\+)"
-    },
-    "fisico": {
-        "grau_protecao": r"(?:IP\d{2})",
-        "dimensoes": r"(\d[\d\.]+\s*mm\s*[xX×]\s*\d[\d\.]+\s*mm\s*[xX×]\s*\d[\d\.]+\s*mm)"
-    }
+PATTERNS_HIKVISION_CORRIGIDO = {
+    "video": {"sensor_imagem": r"Image Sensor","wdr": r"Wide Dynamic Range \(WDR\)","compressao_video": r"Video Compression","taxa_de_bits": r"Video Bit Rate"},
+    "audio": {"microfone_embutido": r"Built-in Microphone","compressao_audio": r"Audio Compression"},
+    "rede": {"interface_rede": r"Ethernet Interface","protocolos": r"Protocols","navegador": r"Web Browser"},
+    "energia": {"tensao_alimentacao": r"Power Supply","consumo_potencia": r"Power Consumption and Current"},
+    "fisico": {"peso": r"^Weight","temperatura_operacao": r"Operating Conditions|Storage Conditions","distancia_ir": r"IR Range|Supplement Light Range"}
 }
+
+def analisar_apenas_hikvision(texto, especificacoes):
+    for categoria, campos in PATTERNS_HIKVISION_CORRIGIDO.items():
+        for chave, padrao in campos.items():
+            valor = buscar_valor(texto, padrao)
+            especificacoes[categoria][chave] = valor if valor else "Não encontrado"
+    
+    especificacoes["inteligencia"]["deteccao_movimento"] = buscar_valor(texto, r"Basic Event")
+    especificacoes["inteligencia"]["protecao_perimetral"] = buscar_valor(texto, r"Perimeter Protection")
+    especificacoes["inteligencia"]["regiao_interesse"] = buscar_valor(texto, r"Region of Interest \(ROI\)")
+
+    especificacoes["fisico"]["temperatura_operacao"] = normalizar_temperatura(especificacoes["fisico"]["temperatura_operacao"])
+    especificacoes["fisico"]["peso"] = normalizar_peso(especificacoes["fisico"]["peso"])
+    especificacoes["rede"]["protocolos"] = normalizar_protocolos(especificacoes["rede"].get("protocolos", ""))
+    especificacoes["rede"]["navegador"] = normalizar_navegadores(especificacoes["rede"].get("navegador", ""))
+    
+    return especificacoes
 
 # =========================
 # Analisador principal
 # =========================
 def analisar_datasheet(texto_original):
     especificacoes = {"video": {}, "audio": {}, "rede": {}, "inteligencia": {}, "energia": {}, "fisico": {}}
+    
+    if "intelbras" in texto_original.lower(): especificacoes["fabricante"] = "Intelbras"
+    elif "hikvision" in texto_original.lower(): especificacoes["fabricante"] = "Hikvision"
+    elif "avigilon" in texto_original.lower(): especificacoes["fabricante"] = "Avigilon"
+    else: especificacoes["fabricante"] = "Desconhecido"
 
-    # Fabricante
-    if "intelbras" in texto_original.lower():
-        especificacoes["fabricante"] = "Intelbras"
-    elif "hikvision" in texto_original.lower():
-        especificacoes["fabricante"] = "Hikvision"
-    elif "avigilon" in texto_original.lower():
-        especificacoes["fabricante"] = "Avigilon"
-    else:
-        especificacoes["fabricante"] = "Desconhecido"
-
-    # Modelo
     stop_words = r"(?:Sensor|Pixels|Lente|Especificações|Câmera|Distância|Compressão|Resolução)"
-    intelbras_pattern = rf"\b(VIP(?:\s|[C|M|W])*?\d{{3,5}}(?:[\s\-]+[A-Z\d\+\.\/]+(?!\s*{stop_words}))*)\b"
-    hikvision_pattern = r"\b(DS-2CD[\w\d\-]+)\b"
+    # >>> CORREÇÃO FINAL <<< Regex menos "guloso" para evitar capturar lixo
+    intelbras_pattern = rf"\b(VIP(?:\s|[C|M|W])*?\d{{3,5}}(?:[\s\-]+[A-Z\d\+\.\/]+(?!\s*{stop_words})){{0,4}})\b"
+    hikvision_pattern = r"\b(DS-2[CD|DE][\w\d\-]+)\b"
     avigilon_pattern = r"\b(H4A-[\w\-]+)\b"
     modelos = re.findall(f"({intelbras_pattern}|{hikvision_pattern}|{avigilon_pattern})", texto_original, re.IGNORECASE)
-    modelo_produto = ", ".join(sorted(set([m[0].strip() for m in modelos]))) or "Não encontrado"
+    modelo_produto = ", ".join(sorted(set([m[0].strip() for m in modelos if m[0]]))) or "Não encontrado"
     especificacoes["modelo_produto"] = clean_value(modelo_produto)
     especificacoes["tags"] = extrair_tags_por_nome(modelo_produto, texto_original)
 
-    # Distância focal
-    lente_m = re.search(r"(\d+\.?\d*\s*(?:mm)?\s*(?:to|-)\s*\d+\.?\d*\s*mm|\b\d\.?\d?\s*mm\b)", texto_original, re.IGNORECASE)
+    lente_m = re.search(r"(\d+\.?\d*\s*(?:mm)?\s*(?:to|-)\s*\d+\.?\d*\s*mm|\b\d+\.?\d*\s*mm\b)", texto_original, re.IGNORECASE)
     especificacoes["distancia_focal"] = normalizar_lente(lente_m.group(1) if lente_m else "")
-
-    # Resolução
-    resolucao_m = re.search(r"(\d{3,4}\s*[xX×]\s*\d{3,4})", texto_original)
-    especificacoes["video"]["resolucao_maxima"] = normalizar_resolucao(resolucao_m.group(1) if resolucao_m else None)
+    
+    # Busca pela resolução no texto todo primeiro
+    resolucao_m = re.search(r"(\d{3,4}\s*[xX×\n\s]*\s*\d{3,4})", texto_original)
+    especificacoes["video"]["resolucao_maxima"] = normalizar_resolucao(resolucao_m.group(0) if resolucao_m else None)
     especificacoes["video"]["pixels_efetivos"] = especificacoes["video"]["resolucao_maxima"]
-
-    # Grau de proteção
+    
     ip_match = re.search(r"(IP\d{2})", texto_original, re.IGNORECASE)
     especificacoes["fisico"]["grau_protecao"] = ip_match.group(1).upper() if ip_match else "Não encontrado"
-
-    # Dimensões
     dimensoes_m = re.search(r"(\d[\d\.]+\s*mm\s*[xX×]\s*\d[\d\.]+\s*mm\s*[xX×]\s*\d[\d\.]+\s*mm)", texto_original)
-    especificacoes["fisico"]["dimensoes"] = clean_value(dimensoes_m.group(1)) if dimensoes_m else "Não encontrado"
+    especificacoes["fisico"]["dimensoes"] = clean_value(dimensoes_m.group(1) if dimensoes_m else "Não encontrado")
 
-    # Campos via padrões
     if especificacoes["fabricante"] == "Hikvision":
-        for categoria, campos in PATTERNS_HIKVISION.items():
-            for chave, padrao in campos.items():
-                valor = buscar_valor(texto_original, padrao)
-                # Normalizações específicas
-                if chave == "compressao_video":
-                    valor = normalizar_compressao_video(valor)
-                elif chave in ["line_crossing", "intrusion", "people_counting", "face_detection"]:
-                    valor = "Sim" if valor else "Não"
-                elif chave == "alimentacao":
-                    valor = clean_value(valor)
-                elif chave == "dimensoes":
-                    valor = clean_value(valor)
-                elif chave == "grau_protecao":
-                    valor = clean_value(valor)
-                elif chave == "protocolos":
-                    valor = normalizar_protocolos(valor)
-                elif chave == "navegador":
-                    valor = normalizar_navegadores(valor)
-                else:
-                    valor = clean_value(valor)
-                especificacoes[categoria][chave] = valor if valor else "Não encontrado"
+        especificacoes = analisar_apenas_hikvision(texto_original, especificacoes)
     else:
         for categoria, campos in PATTERNS.items():
             for chave, padrao in campos.items():
                 valor = buscar_valor(texto_original, padrao)
-                if chave == "peso":
-                    valor = normalizar_peso(valor)
-                elif chave == "temperatura_operacao":
-                    valor = normalizar_temperatura(valor)
-                elif chave == "protocolos":
-                    valor = normalizar_protocolos(valor)
-                elif chave == "navegador":
-                    valor = normalizar_navegadores(valor)
-                else:
-                    valor = clean_value(valor)
+                if chave == "peso": valor = normalizar_peso(valor)
+                elif chave == "temperatura_operacao": valor = normalizar_temperatura(valor)
+                elif chave == "protocolos": valor = normalizar_protocolos(valor)
+                elif chave == "navegador": valor = normalizar_navegadores(valor)
+                else: valor = clean_value(valor)
                 especificacoes[categoria][chave] = valor if valor else "Não encontrado"
-
     return especificacoes
 
 # =========================
 # Execução principal
 # =========================
 def main():
-    print("--- Iniciando Análise de Datasheets (Versão 9.4 - Leitor Hiki Supremo) ---")
+    print(f"--- Iniciando Análise de Datasheets (Versão 10.0 - Final) ---")
     if not os.path.exists(PASTA_DATASHEETS):
         print(f"Pasta '{PASTA_DATASHEETS}' não encontrada.")
         os.makedirs(PASTA_DATASHEETS)
