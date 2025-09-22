@@ -1,0 +1,2098 @@
+{
+    "avigilon-h4a-bo-b-datasheet-en-rev10.pdf": {
+        "video": {
+            "resolucao_maxima": "0.9 MP (1280x720)",
+            "pixels_efetivos": "0.9 MP (1280x720)",
+            "sensor_imagem": "1/2.8” progressive scan CMOS",
+            "wdr": "1–3 MP models",
+            "compressao_video": "H.264 (MPEG-4 Part 10/AVC), Motion JPEG, HDSM SmartCodec Technology",
+            "taxa_de_bits": "Não encontrado"
+        },
+        "audio": {
+            "microfone_embutido": "Não encontrado",
+            "compressao_audio": "Method"
+        },
+        "rede": {
+            "interface_rede": "Não encontrado",
+            "throughput": "Não encontrado",
+            "protocolos": [
+                "RTP",
+                "UDP",
+                "RTP",
+                "UDP multicast",
+                "RTP",
+                "RTSP",
+                "TCP",
+                "RTP",
+                "RTSP",
+                "HTTP",
+                "TCP",
+                "RTP",
+                "RTSP",
+                "HTTPS",
+                "TCP",
+                "HTTP"
+            ],
+            "onvif": "Não encontrado",
+            "navegador": "Não encontrado"
+        },
+        "inteligencia": {
+            "deteccao_movimento": "Pixel and classied objects",
+            "regiao_interesse": "encoding to",
+            "protecao_perimetral": "Não encontrado"
+        },
+        "energia": {
+            "tensao_alimentacao": "VDC: 12 V ± 10%, 13 W min",
+            "consumo_potencia": "13 W"
+        },
+        "fisico": {
+            "grau_protecao": "IP66",
+            "dimensoes": "126 mm x 280 mm x 91 mm",
+            "peso": "Não encontrado",
+            "temperatura_operacao": {
+                "min": null,
+                "max": null,
+                "unidade": "°C"
+            }
+        },
+        "fabricante": "Avigilon",
+        "modelo_produto": "H4A-BO1-IR, H4A-BO2-IR",
+        "tags": [
+            "PoE"
+        ],
+        "distancia_focal": "9 mm (Fixa)"
+    },
+    "Datasheet  - VIP 3225 SD IR IA.pdf": {
+        "video": {
+            "resolucao_maxima": "2.1 MP (1920x1080)",
+            "pixels_efetivos": "2.1 MP (1920x1080)",
+            "sensor_imagem": "1/2.8\" 2Megapixel CMOS",
+            "wdr": "120dB",
+            "compressao_video": "H.264/ H.264B/ H.264H/ H.265/ MJPEG",
+            "taxa_de_bits": "Não encontrado"
+        },
+        "audio": {
+            "microfone_embutido": "Não encontrado",
+            "compressao_audio": "Não encontrado"
+        },
+        "rede": {
+            "interface_rede": "Não encontrado",
+            "throughput": "64 Mbps",
+            "protocolos": [
+                "IPv4",
+                "IPv6",
+                "HTTP",
+                "HTTPS",
+                "Qos",
+                "FTP",
+                "SMTP",
+                "UPnP",
+                "DNS",
+                "DDNS",
+                "NTP",
+                "RTSP"
+            ],
+            "onvif": "Não encontrado",
+            "navegador": [
+                "Internet Explorer4",
+                "Google Chrome e Firefox"
+            ]
+        },
+        "inteligencia": {
+            "deteccao_movimento": "Inteligente (SMD)3",
+            "regiao_interesse": "Até 8 áreas",
+            "protecao_perimetral": "Não encontrado"
+        },
+        "energia": {
+            "tensao_alimentacao": "PoE Ativo (IEEE 802.3at",
+            "consumo_potencia": "máximo de potência"
+        },
+        "fisico": {
+            "grau_protecao": "IP66",
+            "dimensoes": "Não encontrado",
+            "peso": "Não encontrado",
+            "temperatura_operacao": {
+                "min": null,
+                "max": null,
+                "unidade": "°C"
+            }
+        },
+        "fabricante": "Intelbras",
+        "modelo_produto": "VIP 3225 SD IR",
+        "tags": [
+            "PoE",
+            "Smart Motion Detection",
+            "Speed Dome"
+        ],
+        "distancia_focal": "4.8 mm (Fixa)"
+    },
+    "Datasheet - VIP 3216 SD IR IA - V6.pdf": {
+        "video": {
+            "resolucao_maxima": "2.1 MP (1920x1080)",
+            "pixels_efetivos": "2.1 MP (1920x1080)",
+            "sensor_imagem": "1/1.8\" 2Megapixel STARVIS CMOS",
+            "wdr": "Balanço de Branco",
+            "compressao_video": "H.264/ H.264B/ H.264H/ H.265/ MJPEG",
+            "taxa_de_bits": "Não encontrado"
+        },
+        "audio": {
+            "microfone_embutido": "Não encontrado",
+            "compressao_audio": "Não encontrado"
+        },
+        "rede": {
+            "interface_rede": "Não encontrado",
+            "throughput": "64 Mbps",
+            "protocolos": [
+                "TCP",
+                "FTP",
+                "RTMP",
+                "IPv6",
+                "Bonjour",
+                "IPv4",
+                "DNS",
+                "RTCP",
+                "PPPoE",
+                "NTP",
+                "RTP",
+                "802.1x"
+            ],
+            "onvif": "Não encontrado",
+            "navegador": [
+                "Internet Explorer4",
+                "Google Chrome",
+                "Safari e Firefox"
+            ]
+        },
+        "inteligencia": {
+            "deteccao_movimento": "inteligente Sim (pessoas e veículos",
+            "regiao_interesse": "Até 4 áreas",
+            "protecao_perimetral": "Não encontrado"
+        },
+        "energia": {
+            "tensao_alimentacao": "PoE Ativo (IEEE 802.3at",
+            "consumo_potencia": "máximo de potência"
+        },
+        "fisico": {
+            "grau_protecao": "IP66",
+            "dimensoes": "Não encontrado",
+            "peso": "Não encontrado",
+            "temperatura_operacao": {
+                "min": 40,
+                "max": 60,
+                "unidade": "°C"
+            }
+        },
+        "fabricante": "Intelbras",
+        "modelo_produto": "VIP 3216 SD IR, VIP 3216 SD IR IA",
+        "tags": [
+            "Inteligência Artificial",
+            "PoE",
+            "Speed Dome"
+        ],
+        "distancia_focal": "5 mm (Fixa)"
+    },
+    "Datasheet - VIP 3400 MINI SD SC IA FT.pdf": {
+        "video": {
+            "resolucao_maxima": "3.7 MP (2560x1440)",
+            "pixels_efetivos": "3.7 MP (2560x1440)",
+            "sensor_imagem": "1/1.8” 4 megapixels CMOS",
+            "wdr": "120 dB",
+            "compressao_video": "Smart H.265+/H.265/Smart H.264+/H.264B/H.264M/H.264/MJPEG",
+            "taxa_de_bits": "H.264: 3,072 kpbs ~ 15,104 kbps"
+        },
+        "audio": {
+            "microfone_embutido": "Não encontrado",
+            "compressao_audio": "Não encontrado"
+        },
+        "rede": {
+            "interface_rede": "Não encontrado",
+            "throughput": "64 Mbps",
+            "protocolos": "Não encontrado",
+            "onvif": "Não encontrado",
+            "navegador": [
+                "es"
+            ]
+        },
+        "inteligencia": {
+            "deteccao_movimento": "Sim",
+            "regiao_interesse": "Sim",
+            "protecao_perimetral": "Cruzamento de linha e área de intrusão"
+        },
+        "energia": {
+            "tensao_alimentacao": "12 VDC / 1 A ± 10% ou PoE (802.3af",
+            "consumo_potencia": "Básico: 3.6 W"
+        },
+        "fisico": {
+            "grau_protecao": "IP66",
+            "dimensoes": "Não encontrado",
+            "peso": "Não encontrado",
+            "temperatura_operacao": {
+                "min": 30,
+                "max": 55,
+                "unidade": "°C"
+            }
+        },
+        "fabricante": "Intelbras",
+        "modelo_produto": "VIP 3400 MINI SD SC IA, VIP 3400 MINI SD SC IA FT",
+        "tags": [
+            "Inteligência Artificial",
+            "PoE",
+            "Speed Dome",
+            "Super Color"
+        ],
+        "distancia_focal": "4 mm (Fixa)"
+    },
+    "Datasheet - VIP 3430 D SC IA FT_0.pdf": {
+        "video": {
+            "resolucao_maxima": "4.1 MP (2688x1520)",
+            "pixels_efetivos": "4.1 MP (2688x1520)",
+            "sensor_imagem": "1/1.8” 4 megapixels CMOS",
+            "wdr": "120 dB",
+            "compressao_video": "Smart H.265+ / Smart H.264+ / H.265 / H.264 / H.264H / H.264B / MJPEG (Apenas",
+            "taxa_de_bits": "H.264: 32 kpbs ~ 6144 kbps"
+        },
+        "audio": {
+            "microfone_embutido": "Não encontrado",
+            "compressao_audio": "Não encontrado"
+        },
+        "rede": {
+            "interface_rede": "Não encontrado",
+            "throughput": "48 Mbps",
+            "protocolos": "Não encontrado",
+            "onvif": "Não encontrado",
+            "navegador": [
+                "es"
+            ]
+        },
+        "inteligencia": {
+            "deteccao_movimento": "Sim (4 áreas, retangular",
+            "regiao_interesse": "Sim (4 áreas",
+            "protecao_perimetral": "Cruzamento de linha e área de intrusão"
+        },
+        "energia": {
+            "tensao_alimentacao": "12 VDC / PoE",
+            "consumo_potencia": "Básico: 2.0 W (12 VDC); 2.5 W (PoE"
+        },
+        "fisico": {
+            "grau_protecao": "IP67",
+            "dimensoes": "Não encontrado",
+            "peso": "Não encontrado",
+            "temperatura_operacao": {
+                "min": 40,
+                "max": 60,
+                "unidade": "°C"
+            }
+        },
+        "fabricante": "Intelbras",
+        "modelo_produto": "VIP 3430 D SC IA, VIP 3430 D SC IA FT",
+        "tags": [
+            "Dome",
+            "Inteligência Artificial",
+            "PoE",
+            "Super Color"
+        ],
+        "distancia_focal": "2.8 mm (Fixa)"
+    },
+    "Datasheet - VIP 3430 SC IA FT.pdf": {
+        "video": {
+            "resolucao_maxima": "4.1 MP (2688x1520)",
+            "pixels_efetivos": "4.1 MP (2688x1520)",
+            "sensor_imagem": "1/1.8” 4 megapixels CMOS",
+            "wdr": "120 dB",
+            "compressao_video": "Smart H.265+/Smart H.264+/H.265/H.264/H.264H/H.264B/MJPEG (Apenas suportado",
+            "taxa_de_bits": "H.264: 32 kpbs ~ 6144 kbps"
+        },
+        "audio": {
+            "microfone_embutido": "Não encontrado",
+            "compressao_audio": "Não encontrado"
+        },
+        "rede": {
+            "interface_rede": "Não encontrado",
+            "throughput": "48 Mbps",
+            "protocolos": "Não encontrado",
+            "onvif": "Não encontrado",
+            "navegador": [
+                "es"
+            ]
+        },
+        "inteligencia": {
+            "deteccao_movimento": "Sim (4 áreas, retangular",
+            "regiao_interesse": "Sim (4 áreas",
+            "protecao_perimetral": "Cruzamento de linha e área de intrusão"
+        },
+        "energia": {
+            "tensao_alimentacao": "12 VDC / PoE",
+            "consumo_potencia": "Básico: 2.0 W (12 VDC); 3.0 W (PoE"
+        },
+        "fisico": {
+            "grau_protecao": "IP67",
+            "dimensoes": "197.9 mm x 80.2 mm x 76.2 mm",
+            "peso": "Não encontrado",
+            "temperatura_operacao": {
+                "min": 40,
+                "max": 60,
+                "unidade": "°C"
+            }
+        },
+        "fabricante": "Intelbras",
+        "modelo_produto": "VIP 3430 SC IA, VIP 3430 SC IA FT",
+        "tags": [
+            "Inteligência Artificial",
+            "PoE",
+            "Super Color"
+        ],
+        "distancia_focal": "3.6 mm (Fixa)"
+    },
+    "Datasheet - VIP 5460 LPR IA - V11.pdf": {
+        "video": {
+            "resolucao_maxima": "4.1 MP (2688x1520)",
+            "pixels_efetivos": "4.1 MP (2688x1520)",
+            "sensor_imagem": "1/1,8” CMOS 4 megapixels",
+            "wdr": "140 dB",
+            "compressao_video": "H.265, H.264H, H.264M, H.264B, MJPEG",
+            "taxa_de_bits": "CBR / VBR"
+        },
+        "audio": {
+            "microfone_embutido": "Não encontrado",
+            "compressao_audio": "Não encontrado"
+        },
+        "rede": {
+            "interface_rede": "Não encontrado",
+            "throughput": "24 Mbps",
+            "protocolos": "Não encontrado",
+            "onvif": "Não encontrado",
+            "navegador": [
+                "es 5"
+            ]
+        },
+        "inteligencia": {
+            "deteccao_movimento": "Não encontrado",
+            "regiao_interesse": "Não encontrado",
+            "protecao_perimetral": "Não encontrado"
+        },
+        "energia": {
+            "tensao_alimentacao": "12Vdc ou PoE",
+            "consumo_potencia": "Sem luz < 6W"
+        },
+        "fisico": {
+            "grau_protecao": "IP67",
+            "dimensoes": "Não encontrado",
+            "peso": "Não encontrado",
+            "temperatura_operacao": {
+                "min": 30,
+                "max": 65,
+                "unidade": "°C"
+            }
+        },
+        "fabricante": "Intelbras",
+        "modelo_produto": "VIP 5460 LPR, VIP 5460 LPR IA",
+        "tags": [
+            "Inteligência Artificial",
+            "Leitura de Placas",
+            "PoE"
+        ],
+        "distancia_focal": "12 mm (Fixa)"
+    },
+    "DATASHEET - VIP 72100 MV IA FT.pdf": {
+        "video": {
+            "resolucao_maxima": "2.1 MP (1920x1080)",
+            "pixels_efetivos": "2.1 MP (1920x1080)",
+            "sensor_imagem": "1/2.8” 3x2 megapixels CMOS",
+            "wdr": "Balanço do branco",
+            "compressao_video": "H.264H /H.264B/ H.264/ H.265/ MJPEG",
+            "taxa_de_bits": "Canal 1~3"
+        },
+        "audio": {
+            "microfone_embutido": "Não encontrado",
+            "compressao_audio": "Não encontrado"
+        },
+        "rede": {
+            "interface_rede": "Não encontrado",
+            "throughput": "Não encontrado",
+            "protocolos": "Não encontrado",
+            "onvif": "Não encontrado",
+            "navegador": [
+                "es"
+            ]
+        },
+        "inteligencia": {
+            "deteccao_movimento": "Sim (4 regiões distintas configuráveis",
+            "regiao_interesse": "Não encontrado",
+            "protecao_perimetral": "e classificação de humanos e veículos nas linhas e cercas virtuais"
+        },
+        "energia": {
+            "tensao_alimentacao": "12 VDC, ePoE ou PoE+",
+            "consumo_potencia": "Básico: 4.3W (12 VDC); 5.5W (Poe"
+        },
+        "fisico": {
+            "grau_protecao": "IP67",
+            "dimensoes": "278.6 mm x 124 mm x 140.4 mm",
+            "peso": "Não encontrado",
+            "temperatura_operacao": {
+                "min": 40,
+                "max": 60,
+                "unidade": "°C"
+            }
+        },
+        "fabricante": "Intelbras",
+        "modelo_produto": "VIP 72100 MV IA, VIP 72100 MV IA FT",
+        "tags": [
+            "Inteligência Artificial",
+            "PoE"
+        ],
+        "distancia_focal": "3.6 mm (Fixa)"
+    },
+    "Datasheet - VIP 7245 SD IR IA FT - V5.pdf": {
+        "video": {
+            "resolucao_maxima": "2.1 MP (1920x1080)",
+            "pixels_efetivos": "2.1 MP (1920x1080)",
+            "sensor_imagem": "1/2.8” 2 megapixels CMOS",
+            "wdr": "120 dB) / HLC",
+            "compressao_video": "H.264H; H.264B; H.264; H.265; MJPEG (Apenas no Sub Stream",
+            "taxa_de_bits": "CBR / VBR"
+        },
+        "audio": {
+            "microfone_embutido": "Não encontrado",
+            "compressao_audio": "Não encontrado"
+        },
+        "rede": {
+            "interface_rede": "Não encontrado",
+            "throughput": "Não encontrado",
+            "protocolos": "Não encontrado",
+            "onvif": "Não encontrado",
+            "navegador": [
+                "es"
+            ]
+        },
+        "inteligencia": {
+            "deteccao_movimento": "inteligente",
+            "regiao_interesse": "Não encontrado",
+            "protecao_perimetral": "Não encontrado"
+        },
+        "energia": {
+            "tensao_alimentacao": "AC 24V/2.5 ± 25%; PoE+ (802.3at",
+            "consumo_potencia": "< 25 w"
+        },
+        "fisico": {
+            "grau_protecao": "IP67",
+            "dimensoes": "Não encontrado",
+            "peso": "Não encontrado",
+            "temperatura_operacao": {
+                "min": 40,
+                "max": 70,
+                "unidade": "°C"
+            }
+        },
+        "fabricante": "Intelbras",
+        "modelo_produto": "VIP 7245 SD IR IA, VIP 7245 SD IR IA FT",
+        "tags": [
+            "Inteligência Artificial",
+            "PoE",
+            "Speed Dome"
+        ],
+        "distancia_focal": "3.95 mm - 177.75 mm (Varifocal)"
+    },
+    "Datasheet - VIP 74120 LPR IA FT - V1 (1).pdf": {
+        "video": {
+            "resolucao_maxima": "4.1 MP (2688x1520)",
+            "pixels_efetivos": "4.1 MP (2688x1520)",
+            "sensor_imagem": "1/1,8” CMOS 4 megapixels",
+            "wdr": "140 dB",
+            "compressao_video": "H.265, H.264H, H.264M, H.264B, MJPEG",
+            "taxa_de_bits": "CBR / VBR"
+        },
+        "audio": {
+            "microfone_embutido": "Não encontrado",
+            "compressao_audio": "Não encontrado"
+        },
+        "rede": {
+            "interface_rede": "Não encontrado",
+            "throughput": "Não encontrado",
+            "protocolos": "Não encontrado",
+            "onvif": "Não encontrado",
+            "navegador": [
+                "es 5"
+            ]
+        },
+        "inteligencia": {
+            "deteccao_movimento": "Não encontrado",
+            "regiao_interesse": "Não encontrado",
+            "protecao_perimetral": "Não encontrado"
+        },
+        "energia": {
+            "tensao_alimentacao": "12Vdc ou PoE",
+            "consumo_potencia": "Sem luz < 6W"
+        },
+        "fisico": {
+            "grau_protecao": "IP67",
+            "dimensoes": "Não encontrado",
+            "peso": "Não encontrado",
+            "temperatura_operacao": {
+                "min": 30,
+                "max": 65,
+                "unidade": "°C"
+            }
+        },
+        "fabricante": "Intelbras",
+        "modelo_produto": "VIP 74120 LPR IA, VIP 74120 LPR IA FT",
+        "tags": [
+            "Inteligência Artificial",
+            "Leitura de Placas",
+            "PoE"
+        ],
+        "distancia_focal": "32 mm (Fixa)"
+    },
+    "datasheet - vip-5425-sd-dual-ia-ft-27.01.pdf": {
+        "video": {
+            "resolucao_maxima": "3.7 MP (2560x1440)",
+            "pixels_efetivos": "3.7 MP (2560x1440)",
+            "sensor_imagem": "1/2.8” 4 megapixels CMOS",
+            "wdr": "120 dB",
+            "compressao_video": "H.265+/H.265/H.264+/H.264/ H.264B/ H.264H/ H.264M/MJPEG",
+            "taxa_de_bits": "CBR / VBR"
+        },
+        "audio": {
+            "microfone_embutido": "Não encontrado",
+            "compressao_audio": "Não encontrado"
+        },
+        "rede": {
+            "interface_rede": "Não encontrado",
+            "throughput": "Não encontrado",
+            "protocolos": "Não encontrado",
+            "onvif": "Não encontrado",
+            "navegador": [
+                "es"
+            ]
+        },
+        "inteligencia": {
+            "deteccao_movimento": "Sim / SMD 4.0",
+            "regiao_interesse": "Sim",
+            "protecao_perimetral": "Não encontrado"
+        },
+        "energia": {
+            "tensao_alimentacao": "12 Vdc / 3 A ou PoE+ (802.3at",
+            "consumo_potencia": "12 W, 25 W com PTZ + ICR e IR ligado"
+        },
+        "fisico": {
+            "grau_protecao": "IP66",
+            "dimensoes": "160 mm x 184.4 mm x 304.6 mm",
+            "peso": "Não encontrado",
+            "temperatura_operacao": {
+                "min": 40,
+                "max": 65,
+                "unidade": "°C"
+            }
+        },
+        "fabricante": "Intelbras",
+        "modelo_produto": "VIP 5425 SD DUAL IA, VIP 5425 SD Dual IA FT",
+        "tags": [
+            "Inteligência Artificial",
+            "PoE",
+            "Smart Motion Detection",
+            "Speed Dome"
+        ],
+        "distancia_focal": "2.8 mm (Fixa)"
+    },
+    "Datasheet UNIFICADO - VIPC 1430 BD v3_0 (1).pdf": {
+        "video": {
+            "resolucao_maxima": "3.7 MP (2560x1440)",
+            "pixels_efetivos": "3.7 MP (2560x1440)",
+            "sensor_imagem": "1/3” CMOS",
+            "wdr": "Perfil",
+            "compressao_video": "Não encontrado",
+            "taxa_de_bits": "Não encontrado"
+        },
+        "audio": {
+            "microfone_embutido": "Não encontrado",
+            "compressao_audio": "Não encontrado"
+        },
+        "rede": {
+            "interface_rede": "Não encontrado",
+            "throughput": "24 Mbps",
+            "protocolos": "Não encontrado",
+            "onvif": "Não encontrado",
+            "navegador": [
+                "4"
+            ]
+        },
+        "inteligencia": {
+            "deteccao_movimento": "5",
+            "regiao_interesse": "Não encontrado",
+            "protecao_perimetral": "Não encontrado"
+        },
+        "energia": {
+            "tensao_alimentacao": "PoE Ativo",
+            "consumo_potencia": "Mínimo: 1.4 W (12 VDC) / 2.1 W (PoE"
+        },
+        "fisico": {
+            "grau_protecao": "IP67",
+            "dimensoes": "Não encontrado",
+            "peso": "Não encontrado",
+            "temperatura_operacao": {
+                "min": 40,
+                "max": 50,
+                "unidade": "°C"
+            }
+        },
+        "fabricante": "Intelbras",
+        "modelo_produto": "VIPC 1430 B VIPC 1430, VIPC 1430 B VIPC 1430",
+        "tags": [
+            "Bullet",
+            "PoE"
+        ],
+        "distancia_focal": "2.8 mm (Fixa)"
+    },
+    "Datasheet UNIFICADO - VIPC 1430 BD v3_0.pdf": {
+        "video": {
+            "resolucao_maxima": "3.7 MP (2560x1440)",
+            "pixels_efetivos": "3.7 MP (2560x1440)",
+            "sensor_imagem": "1/3” CMOS",
+            "wdr": "Perfil",
+            "compressao_video": "Não encontrado",
+            "taxa_de_bits": "Não encontrado"
+        },
+        "audio": {
+            "microfone_embutido": "Não encontrado",
+            "compressao_audio": "Não encontrado"
+        },
+        "rede": {
+            "interface_rede": "Não encontrado",
+            "throughput": "24 Mbps",
+            "protocolos": "Não encontrado",
+            "onvif": "Não encontrado",
+            "navegador": [
+                "4"
+            ]
+        },
+        "inteligencia": {
+            "deteccao_movimento": "5",
+            "regiao_interesse": "Não encontrado",
+            "protecao_perimetral": "Não encontrado"
+        },
+        "energia": {
+            "tensao_alimentacao": "PoE Ativo",
+            "consumo_potencia": "Mínimo: 1.4 W (12 VDC) / 2.1 W (PoE"
+        },
+        "fisico": {
+            "grau_protecao": "IP67",
+            "dimensoes": "Não encontrado",
+            "peso": "Não encontrado",
+            "temperatura_operacao": {
+                "min": 40,
+                "max": 50,
+                "unidade": "°C"
+            }
+        },
+        "fabricante": "Intelbras",
+        "modelo_produto": "VIPC 1430 B VIPC 1430, VIPC 1430 B VIPC 1430",
+        "tags": [
+            "Bullet",
+            "PoE"
+        ],
+        "distancia_focal": "2.8 mm (Fixa)"
+    },
+    "Datasheet UNIFICADO - VIPW 1230 BD (V3).pdf": {
+        "video": {
+            "resolucao_maxima": "2.1 MP (1920x1080)",
+            "pixels_efetivos": "2.1 MP (1920x1080)",
+            "sensor_imagem": "2 Megapixels 1/3” CMOS",
+            "wdr": "Perfil Dia & Noite",
+            "compressao_video": "H.264 / H.264B / H.264H / H.265",
+            "taxa_de_bits": "Não encontrado"
+        },
+        "audio": {
+            "microfone_embutido": "Sim",
+            "compressao_audio": "AAC / G.711A / G.711Mu / PCM"
+        },
+        "rede": {
+            "interface_rede": "Não encontrado",
+            "throughput": "Cabo",
+            "protocolos": [
+                "HTTP",
+                "HTTPS",
+                "TCP",
+                "UDP",
+                "ARP",
+                "RTP",
+                "RTSP",
+                "RTCP",
+                "RTMP",
+                "SMTP"
+            ],
+            "onvif": "Não encontrado",
+            "navegador": [
+                "Chrome e Firefox"
+            ]
+        },
+        "inteligencia": {
+            "deteccao_movimento": "Sim",
+            "regiao_interesse": "Não encontrado",
+            "protecao_perimetral": "Não encontrado"
+        },
+        "energia": {
+            "tensao_alimentacao": "PoE",
+            "consumo_potencia": "máximo de potência"
+        },
+        "fisico": {
+            "grau_protecao": "IP67",
+            "dimensoes": "Não encontrado",
+            "peso": "Não encontrado",
+            "temperatura_operacao": {
+                "min": 30,
+                "max": 55,
+                "unidade": "°C"
+            }
+        },
+        "fabricante": "Intelbras",
+        "modelo_produto": "VIPW 1230 B VIPW 1230, VIPW 1230 B VIPW 1230, VIPW 1230 B/D - Incorpora produto homologado pela Anatel sob os",
+        "tags": [
+            "Bullet",
+            "Dome",
+            "PoE"
+        ],
+        "distancia_focal": "2.8 mm (Fixa)"
+    },
+    "Datasheet UNIFICADO VIP 1230 BD G5 V9.pdf": {
+        "video": {
+            "resolucao_maxima": "2.1 MP (1920x1080)",
+            "pixels_efetivos": "2.1 MP (1920x1080)",
+            "sensor_imagem": "1/2.8” 2 megapixels CMOS",
+            "wdr": "Digital, 52 dB",
+            "compressao_video": "H.264/ H.264B/ H.264H/ H.265/ MJPEG2",
+            "taxa_de_bits": "Não encontrado"
+        },
+        "audio": {
+            "microfone_embutido": "Não encontrado",
+            "compressao_audio": "Não encontrado"
+        },
+        "rede": {
+            "interface_rede": "Não encontrado",
+            "throughput": "24 Mbps",
+            "protocolos": [
+                "IPv4",
+                "IPv6",
+                "HTTP",
+                "TCP",
+                "UDP",
+                "ARP",
+                "RTP",
+                "RTSP",
+                "RTCP",
+                "RTMP",
+                "SMTP",
+                "FTP",
+                "DHCP",
+                "DNS"
+            ],
+            "onvif": "Não encontrado",
+            "navegador": [
+                "Internet Explorer6",
+                "Google Chrome e Firefox"
+            ]
+        },
+        "inteligencia": {
+            "deteccao_movimento": "com",
+            "regiao_interesse": "Não encontrado",
+            "protecao_perimetral": "Não encontrado"
+        },
+        "energia": {
+            "tensao_alimentacao": "PoE Ativo (IEE 802.3af",
+            "consumo_potencia": "máximo de potência"
+        },
+        "fisico": {
+            "grau_protecao": "IP67",
+            "dimensoes": "Não encontrado",
+            "peso": "Não encontrado",
+            "temperatura_operacao": {
+                "min": 40,
+                "max": 60,
+                "unidade": "°C"
+            }
+        },
+        "fabricante": "Intelbras",
+        "modelo_produto": "VIP 1230 B G5, VIP 1230 B G5 VIP 1230 D, VIP 1230 D G5",
+        "tags": [
+            "Bullet",
+            "Dome",
+            "PoE"
+        ],
+        "distancia_focal": "3.6 mm (Fixa)"
+    },
+    "Datasheet VIP 1230 BD FC+ V3.pdf": {
+        "video": {
+            "resolucao_maxima": "2.1 MP (1920x1080)",
+            "pixels_efetivos": "2.1 MP (1920x1080)",
+            "sensor_imagem": "2 Megapixels 1/2.8” CMOS",
+            "wdr": "Não encontrado",
+            "compressao_video": "4",
+            "taxa_de_bits": "CBR / VBR"
+        },
+        "audio": {
+            "microfone_embutido": "Detecção de Humanos",
+            "compressao_audio": "Não encontrado"
+        },
+        "rede": {
+            "interface_rede": "Não encontrado",
+            "throughput": "Cabo",
+            "protocolos": [
+                "ARP",
+                "CGI",
+                "DHCP",
+                "DDNS",
+                "DNS",
+                "FTP",
+                "Filtro IP",
+                "HTTP",
+                "HTTPS",
+                "ICMP",
+                "IGMP",
+                "IPv4"
+            ],
+            "onvif": "Não encontrado",
+            "navegador": [
+                "es 5"
+            ]
+        },
+        "inteligencia": {
+            "deteccao_movimento": "Não encontrado",
+            "regiao_interesse": "Não encontrado",
+            "protecao_perimetral": "Não encontrado"
+        },
+        "energia": {
+            "tensao_alimentacao": "12 VDC ou PoE (802.3af",
+            "consumo_potencia": "Mínimo: 1.8 W (12 VDC) / 2.3 W (PoE"
+        },
+        "fisico": {
+            "grau_protecao": "IP67",
+            "dimensoes": "197.9 mm × 80.2 mm × 76.2 mm",
+            "peso": "Não encontrado",
+            "temperatura_operacao": {
+                "min": 40,
+                "max": 60,
+                "unidade": "°C"
+            }
+        },
+        "fabricante": "Intelbras",
+        "modelo_produto": "VIP 1230 FC+ VIP 1230 D FC",
+        "tags": [
+            "Dome",
+            "Full Color / Super Color",
+            "Full Color+",
+            "PoE"
+        ],
+        "distancia_focal": "3.6 mm (Fixa)"
+    },
+    "Datasheet VIP 1300 MINI SD (V9).pdf": {
+        "video": {
+            "resolucao_maxima": "3.1 MP (2048x1536)",
+            "pixels_efetivos": "3.1 MP (2048x1536)",
+            "sensor_imagem": "3 Megapixels 1/2.8” CMOS",
+            "wdr": "Não encontrado",
+            "compressao_video": "H.265 / H.264 / H.264B / H.264H / MJPEG",
+            "taxa_de_bits": "CBR / VBR"
+        },
+        "audio": {
+            "microfone_embutido": "Sim",
+            "compressao_audio": "Não encontrado"
+        },
+        "rede": {
+            "interface_rede": "Não encontrado",
+            "throughput": "20 Mbps",
+            "protocolos": [
+                "IPv4",
+                "IPv6",
+                "HTTP",
+                "HTTPS",
+                "TCP",
+                "IP",
+                "RTSP",
+                "UDP",
+                "SMTP",
+                "NTP",
+                "DHCP",
+                "DNS",
+                "DDNS",
+                "SSL",
+                "FTP",
+                "ARP"
+            ],
+            "onvif": "Não encontrado",
+            "navegador": [
+                "es"
+            ]
+        },
+        "inteligencia": {
+            "deteccao_movimento": "inteligente",
+            "regiao_interesse": "Não encontrado",
+            "protecao_perimetral": "Não encontrado"
+        },
+        "energia": {
+            "tensao_alimentacao": "12 Vdc (P4 fêmea) ou PoE (802.3af",
+            "consumo_potencia": "Mínimo: 3 W"
+        },
+        "fisico": {
+            "grau_protecao": "IP66",
+            "dimensoes": "Não encontrado",
+            "peso": "Não encontrado",
+            "temperatura_operacao": {
+                "min": 30,
+                "max": 55,
+                "unidade": "°C"
+            }
+        },
+        "fabricante": "Intelbras",
+        "modelo_produto": "VIP 1300 MINI",
+        "tags": [
+            "PoE"
+        ],
+        "distancia_focal": "8 mm (Fixa)"
+    },
+    "Datasheet VIP 1430 BD FC+ V5_0 (1).pdf": {
+        "video": {
+            "resolucao_maxima": "3.7 MP (2560x1440)",
+            "pixels_efetivos": "3.7 MP (2560x1440)",
+            "sensor_imagem": "4 Megapixels 1/2.9” CMOS",
+            "wdr": "Não encontrado",
+            "compressao_video": "H.265 | H.264 | H.264H | H.264B | MJPEG",
+            "taxa_de_bits": "CBR | VBR"
+        },
+        "audio": {
+            "microfone_embutido": "Detecção de Humanos",
+            "compressao_audio": "Não encontrado"
+        },
+        "rede": {
+            "interface_rede": "Não encontrado",
+            "throughput": "Cabo",
+            "protocolos": "Não encontrado",
+            "onvif": "Não encontrado",
+            "navegador": [
+                "es 6"
+            ]
+        },
+        "inteligencia": {
+            "deteccao_movimento": "Não encontrado",
+            "regiao_interesse": "Não encontrado",
+            "protecao_perimetral": "Não encontrado"
+        },
+        "energia": {
+            "tensao_alimentacao": "12 VDC ou PoE (802.3af",
+            "consumo_potencia": "Mínimo: 2.0 W (12 VDC) / 2.9 W (PoE"
+        },
+        "fisico": {
+            "grau_protecao": "IP67",
+            "dimensoes": "197.9 mm × 80.2 mm × 76.2 mm",
+            "peso": "Não encontrado",
+            "temperatura_operacao": {
+                "min": 40,
+                "max": 60,
+                "unidade": "°C"
+            }
+        },
+        "fabricante": "Intelbras",
+        "modelo_produto": "VIP 1430 FC+ VIP 1430 D FC",
+        "tags": [
+            "Dome",
+            "Full Color / Super Color",
+            "Full Color+",
+            "PoE"
+        ],
+        "distancia_focal": "3.6 mm (Fixa)"
+    },
+    "Datasheet VIP 1430 BD FC+ V5_0.pdf": {
+        "video": {
+            "resolucao_maxima": "3.7 MP (2560x1440)",
+            "pixels_efetivos": "3.7 MP (2560x1440)",
+            "sensor_imagem": "4 Megapixels 1/2.9” CMOS",
+            "wdr": "Não encontrado",
+            "compressao_video": "H.265 | H.264 | H.264H | H.264B | MJPEG",
+            "taxa_de_bits": "CBR | VBR"
+        },
+        "audio": {
+            "microfone_embutido": "Detecção de Humanos",
+            "compressao_audio": "Não encontrado"
+        },
+        "rede": {
+            "interface_rede": "Não encontrado",
+            "throughput": "Cabo",
+            "protocolos": "Não encontrado",
+            "onvif": "Não encontrado",
+            "navegador": [
+                "es 6"
+            ]
+        },
+        "inteligencia": {
+            "deteccao_movimento": "Não encontrado",
+            "regiao_interesse": "Não encontrado",
+            "protecao_perimetral": "Não encontrado"
+        },
+        "energia": {
+            "tensao_alimentacao": "12 VDC ou PoE (802.3af",
+            "consumo_potencia": "Mínimo: 2.0 W (12 VDC) / 2.9 W (PoE"
+        },
+        "fisico": {
+            "grau_protecao": "IP67",
+            "dimensoes": "197.9 mm × 80.2 mm × 76.2 mm",
+            "peso": "Não encontrado",
+            "temperatura_operacao": {
+                "min": 40,
+                "max": 60,
+                "unidade": "°C"
+            }
+        },
+        "fabricante": "Intelbras",
+        "modelo_produto": "VIP 1430 FC+ VIP 1430 D FC",
+        "tags": [
+            "Dome",
+            "Full Color / Super Color",
+            "Full Color+",
+            "PoE"
+        ],
+        "distancia_focal": "3.6 mm (Fixa)"
+    },
+    "Datasheet VIP 3230 BD FC+ IA - 2.pdf": {
+        "video": {
+            "resolucao_maxima": "2.1 MP (1920x1080)",
+            "pixels_efetivos": "2.1 MP (1920x1080)",
+            "sensor_imagem": "1/2.8” 2 MP Progressive CMOS",
+            "wdr": "120 dB)/ HLC",
+            "compressao_video": "H.265/ H.264/H.264B/MJPEG",
+            "taxa_de_bits": "CBR / VBR"
+        },
+        "audio": {
+            "microfone_embutido": "Sim",
+            "compressao_audio": "Não encontrado"
+        },
+        "rede": {
+            "interface_rede": "Não encontrado",
+            "throughput": "Máx",
+            "protocolos": "Não encontrado",
+            "onvif": "Não encontrado",
+            "navegador": [
+                "es"
+            ]
+        },
+        "inteligencia": {
+            "deteccao_movimento": "inteligente",
+            "regiao_interesse": "Até 4 áreas",
+            "protecao_perimetral": "Não encontrado"
+        },
+        "energia": {
+            "tensao_alimentacao": "12 Vdc (P4 fêmea)/ PoE 802.3af",
+            "consumo_potencia": "< 5W"
+        },
+        "fisico": {
+            "grau_protecao": "IP67",
+            "dimensoes": "Não encontrado",
+            "peso": "Não encontrado",
+            "temperatura_operacao": {
+                "min": null,
+                "max": null,
+                "unidade": "°C"
+            }
+        },
+        "fabricante": "Intelbras",
+        "modelo_produto": "VIP 3230 FC+ IA VIP 3230 D FC",
+        "tags": [
+            "Dome",
+            "Full Color / Super Color",
+            "Full Color+",
+            "Inteligência Artificial",
+            "PoE"
+        ],
+        "distancia_focal": "2.8 mm (Fixa)"
+    },
+    "Datasheet VIP 3830 IA - V3.pdf": {
+        "video": {
+            "resolucao_maxima": "8.3 MP (3840x2160)",
+            "pixels_efetivos": "8.3 MP (3840x2160)",
+            "sensor_imagem": "8 Megapixels 1/2.7” CMOS",
+            "wdr": "Não encontrado",
+            "compressao_video": "H.265 / H.264 / H.264H / H.264B / MJPEG",
+            "taxa_de_bits": "CBR/ VBR"
+        },
+        "audio": {
+            "microfone_embutido": "Sim",
+            "compressao_audio": "Não encontrado"
+        },
+        "rede": {
+            "interface_rede": "Não encontrado",
+            "throughput": "48 Mbps",
+            "protocolos": [
+                "IPv4",
+                "IPv6",
+                "HTTP",
+                "HTTPS",
+                "TCP",
+                "UDP",
+                "ARP",
+                "RTP",
+                "RTSP",
+                "RTCP",
+                "RTMP",
+                "SMTP",
+                "FTP",
+                "SFTP"
+            ],
+            "onvif": "Não encontrado",
+            "navegador": [
+                "es"
+            ]
+        },
+        "inteligencia": {
+            "deteccao_movimento": "Até 4 áreas",
+            "regiao_interesse": "Não encontrado",
+            "protecao_perimetral": "Não encontrado"
+        },
+        "energia": {
+            "tensao_alimentacao": "12 VDC ou PoE (802.3af",
+            "consumo_potencia": "Mínimo: 2,7 W (12 VDC) / 3,4 W (PoE"
+        },
+        "fisico": {
+            "grau_protecao": "IP67",
+            "dimensoes": "70 mm x 70 mm x 166.2 mm",
+            "peso": "Não encontrado",
+            "temperatura_operacao": {
+                "min": 40,
+                "max": 60,
+                "unidade": "°C"
+            }
+        },
+        "fabricante": "Intelbras",
+        "modelo_produto": "VIP 3830, VIP 3830 IA",
+        "tags": [
+            "Inteligência Artificial",
+            "PoE"
+        ],
+        "distancia_focal": "3.6 mm (Fixa)"
+    },
+    "datasheet-vip-3230-fc+-ia-vip-3230-d-fc+-ia-pt.pdf": {
+        "video": {
+            "resolucao_maxima": "2.1 MP (1920x1080)",
+            "pixels_efetivos": "2.1 MP (1920x1080)",
+            "sensor_imagem": "1/2.8” 2 MP Progressive CMOS",
+            "wdr": "120 dB)/ HLC",
+            "compressao_video": "H.265/ H.264/H.264B/MJPEG",
+            "taxa_de_bits": "CBR / VBR"
+        },
+        "audio": {
+            "microfone_embutido": "Sim",
+            "compressao_audio": "Não encontrado"
+        },
+        "rede": {
+            "interface_rede": "Não encontrado",
+            "throughput": "Máx",
+            "protocolos": "Não encontrado",
+            "onvif": "Não encontrado",
+            "navegador": [
+                "es"
+            ]
+        },
+        "inteligencia": {
+            "deteccao_movimento": "inteligente",
+            "regiao_interesse": "Até 4 áreas",
+            "protecao_perimetral": "Não encontrado"
+        },
+        "energia": {
+            "tensao_alimentacao": "12 Vdc (P4 fêmea)/ PoE 802.3af",
+            "consumo_potencia": "< 5W"
+        },
+        "fisico": {
+            "grau_protecao": "IP67",
+            "dimensoes": "Não encontrado",
+            "peso": "Não encontrado",
+            "temperatura_operacao": {
+                "min": null,
+                "max": null,
+                "unidade": "°C"
+            }
+        },
+        "fabricante": "Intelbras",
+        "modelo_produto": "VIP 3230 FC+ IA VIP 3230 D FC",
+        "tags": [
+            "Dome",
+            "Full Color / Super Color",
+            "Full Color+",
+            "Inteligência Artificial",
+            "PoE"
+        ],
+        "distancia_focal": "2.8 mm (Fixa)"
+    },
+    "Datasheet-VIP-3430-W-3430-D-W-02.20.pdf": {
+        "video": {
+            "resolucao_maxima": "4.1 MP (2688x1520)",
+            "pixels_efetivos": "4.1 MP (2688x1520)",
+            "sensor_imagem": "1/3” 4 megapixels CMOS",
+            "wdr": "/ HLC",
+            "compressao_video": "H.264/H.264B/H.265/H.265/MJPEG",
+            "taxa_de_bits": "CBR / VBR"
+        },
+        "audio": {
+            "microfone_embutido": "Não encontrado",
+            "compressao_audio": "Não encontrado"
+        },
+        "rede": {
+            "interface_rede": "Não encontrado",
+            "throughput": "Não encontrado",
+            "protocolos": "Não encontrado",
+            "onvif": "Não encontrado",
+            "navegador": [
+                "es"
+            ]
+        },
+        "inteligencia": {
+            "deteccao_movimento": "Até 4 áreas",
+            "regiao_interesse": "Até 4 áreas",
+            "protecao_perimetral": "Não encontrado"
+        },
+        "energia": {
+            "tensao_alimentacao": "12 Vdc – 1 A (máximo",
+            "consumo_potencia": "6.5 W"
+        },
+        "fisico": {
+            "grau_protecao": "IP67",
+            "dimensoes": "Não encontrado",
+            "peso": "Não encontrado",
+            "temperatura_operacao": {
+                "min": 0,
+                "max": 50,
+                "unidade": "°C"
+            }
+        },
+        "fabricante": "Intelbras",
+        "modelo_produto": "VIP 3430 W VIP 3430 D, VIP 3430 W VIP 3430 D W Sistema operacional Linux",
+        "tags": [
+            "Dome",
+            "PoE"
+        ],
+        "distancia_focal": "2.8 mm (Fixa)"
+    },
+    "datasheet-vip-5207-tm-ft-pt_0.pdf": {
+        "video": {
+            "resolucao_maxima": "0.0 MP (256x192)",
+            "pixels_efetivos": "0.0 MP (256x192)",
+            "sensor_imagem": "Detector de plano focal não resfriado de óxido de vanádio",
+            "wdr": "Não encontrado",
+            "compressao_video": "H.265; H.264H; H.264; MJEPG",
+            "taxa_de_bits": "Não encontrado"
+        },
+        "audio": {
+            "microfone_embutido": "Não encontrado",
+            "compressao_audio": "Não encontrado"
+        },
+        "rede": {
+            "interface_rede": "Não encontrado",
+            "throughput": "Não encontrado",
+            "protocolos": "Não encontrado",
+            "onvif": "Não encontrado",
+            "navegador": [
+                "es"
+            ]
+        },
+        "inteligencia": {
+            "deteccao_movimento": "Não encontrado",
+            "regiao_interesse": "Sim",
+            "protecao_perimetral": "sensor térmico"
+        },
+        "energia": {
+            "tensao_alimentacao": "12 VDC, PoE (802.3af",
+            "consumo_potencia": "3 W, no máximo 8,5 W (aquecedor ligado"
+        },
+        "fisico": {
+            "grau_protecao": "IP67",
+            "dimensoes": "Não encontrado",
+            "peso": "Não encontrado",
+            "temperatura_operacao": {
+                "min": 30,
+                "max": 60,
+                "unidade": "°C"
+            }
+        },
+        "fabricante": "Intelbras",
+        "modelo_produto": "VIP 5200 TM, VIP 5200 TM FT, VIP 5203 TM FT, VIP 5203 TM FT VIP 5207 TM FT VIP 5210 TM FT 0.5 m 1.0 m 2.0 m DRI2 Segundo, VIP 5203 TM FT VIP 5207 TM FT VIP 5210 TM FT 1, VIP 5203 TM FT VIP 5207 TM FT VIP 5210 TM FT 1m 2.5m 2.5m Zoom digital 16x Controle do foco Fixo AGC, VIP 5203 TM FT VIP 5207 TM FT VIP 5210 TM FT 3, VIP 5203 TM FT VIP 5207 TM FT VIP 5210 TM FT Detectar, VIP 5203 TM FT VIP 5207 TM FT VIP 5210 TM FT F1.6 F2.0 F2.0, VIP 5203 TM FT VIP 5207 TM FT VIP 5210 TM FT H, VIP 5203 TM FT VIP 5207 TM FT VIP 5210 TM FT Humanos, VIP 5207 TM FT, VIP 5210 TM FT",
+        "tags": [
+            "PoE"
+        ],
+        "distancia_focal": "5 mm (Fixa)"
+    },
+    "datasheet-vip-5450-d-4g-ia-ft-pt.pdf": {
+        "video": {
+            "resolucao_maxima": "4.1 MP (2688x1520)",
+            "pixels_efetivos": "4.1 MP (2688x1520)",
+            "sensor_imagem": "1/ 2,7 4 megapixels CMOS",
+            "wdr": "120 dB) / HLC",
+            "compressao_video": "H.265/H.264/H.264H/H.264B/MJPEG",
+            "taxa_de_bits": "CBR / VBR"
+        },
+        "audio": {
+            "microfone_embutido": "/ 1 Entrada de áudio / 1 Saída de Áudio",
+            "compressao_audio": "Não encontrado"
+        },
+        "rede": {
+            "interface_rede": "Não encontrado",
+            "throughput": "64Mbps",
+            "protocolos": "Não encontrado",
+            "onvif": "Não encontrado",
+            "navegador": [
+                "es"
+            ]
+        },
+        "inteligencia": {
+            "deteccao_movimento": "Não encontrado",
+            "regiao_interesse": "Não encontrado",
+            "protecao_perimetral": "Não encontrado"
+        },
+        "energia": {
+            "tensao_alimentacao": "12 Vdc. Não possui PoE",
+            "consumo_potencia": "< 12 W"
+        },
+        "fisico": {
+            "grau_protecao": "IP67",
+            "dimensoes": "Não encontrado",
+            "peso": "Não encontrado",
+            "temperatura_operacao": {
+                "min": 30,
+                "max": 60,
+                "unidade": "°C"
+            }
+        },
+        "fabricante": "Intelbras",
+        "modelo_produto": "VIP 5450 D 4G IA, VIP 5450 D 4G IA FT, VIP 5450 D 4G IA FT Incorpora produto homologado pela Anatel sob o",
+        "tags": [
+            "Dome",
+            "Inteligência Artificial",
+            "PoE"
+        ],
+        "distancia_focal": "2.8 mm (Fixa)"
+    },
+    "datasheet-VIP-9233-SD-laser-IA-FT-pt.pdf": {
+        "video": {
+            "resolucao_maxima": "2.1 MP (1920x1080)",
+            "pixels_efetivos": "2.1 MP (1920x1080)",
+            "sensor_imagem": "1/1.8” 2 megapixels CMOS",
+            "wdr": "120 dB",
+            "compressao_video": "H.265+/H.265/H.264+/H.264/MJPEG",
+            "taxa_de_bits": "H.264: 32 kpbs ~ 8192 kbps"
+        },
+        "audio": {
+            "microfone_embutido": "Não encontrado",
+            "compressao_audio": "Não encontrado"
+        },
+        "rede": {
+            "interface_rede": "Não encontrado",
+            "throughput": "Não encontrado",
+            "protocolos": "Não encontrado",
+            "onvif": "Não encontrado",
+            "navegador": [
+                "es"
+            ]
+        },
+        "inteligencia": {
+            "deteccao_movimento": "Sim",
+            "regiao_interesse": "Sim",
+            "protecao_perimetral": "Não encontrado"
+        },
+        "energia": {
+            "tensao_alimentacao": "24 Vac / 3 A ou Hi-PoE",
+            "consumo_potencia": "20 W, 33 W com Laser ligado"
+        },
+        "fisico": {
+            "grau_protecao": "IP67",
+            "dimensoes": "Não encontrado",
+            "peso": "Não encontrado",
+            "temperatura_operacao": {
+                "min": 40,
+                "max": 70,
+                "unidade": "°C"
+            }
+        },
+        "fabricante": "Intelbras",
+        "modelo_produto": "VIP 9233 SD Laser IA, VIP 9233 SD Laser IA FT",
+        "tags": [
+            "Inteligência Artificial",
+            "PoE",
+            "Speed Dome"
+        ],
+        "distancia_focal": "4 mm (Fixa)"
+    },
+    "datasheet-vip-93200-lpr-ia-ft-g2-pt.pdf": {
+        "video": {
+            "resolucao_maxima": "3.1 MP (2048x1536)",
+            "pixels_efetivos": "3.1 MP (2048x1536)",
+            "sensor_imagem": "2/3” 3 megapixels GS-CMOS",
+            "wdr": "90 dB",
+            "compressao_video": "H.265, H.264H, H.264M, MJEPG",
+            "taxa_de_bits": "CBR / VBR"
+        },
+        "audio": {
+            "microfone_embutido": "Não encontrado",
+            "compressao_audio": "Não encontrado"
+        },
+        "rede": {
+            "interface_rede": "Não encontrado",
+            "throughput": "Não encontrado",
+            "protocolos": "Não encontrado",
+            "onvif": "Não encontrado",
+            "navegador": [
+                "es"
+            ]
+        },
+        "inteligencia": {
+            "deteccao_movimento": "Não encontrado",
+            "regiao_interesse": "Não encontrado",
+            "protecao_perimetral": "Não encontrado"
+        },
+        "energia": {
+            "tensao_alimentacao": "100 ~ 240 Vac",
+            "consumo_potencia": "<20 W"
+        },
+        "fisico": {
+            "grau_protecao": "IP66",
+            "dimensoes": "Não encontrado",
+            "peso": "Não encontrado",
+            "temperatura_operacao": {
+                "min": 40,
+                "max": 65,
+                "unidade": "°C"
+            }
+        },
+        "fabricante": "Intelbras",
+        "modelo_produto": "VIP 93200 LPR IA FT, VIP 93200 LPR IA FT G2",
+        "tags": [
+            "Inteligência Artificial",
+            "Leitura de Placas"
+        ],
+        "distancia_focal": "40 mm (Fixa)"
+    },
+    "datasheet-vip-94120-ultra-ia-ft-pt.pdf": {
+        "video": {
+            "resolucao_maxima": "4.1 MP (2688x1520)",
+            "pixels_efetivos": "4.1 MP (2688x1520)",
+            "sensor_imagem": "1/1.8” 4 megapixels CMOS",
+            "wdr": "140 dB) / HLC",
+            "compressao_video": "H.265/ H.264/H.264H/H.264B/MJPEG",
+            "taxa_de_bits": "CBR / VBR"
+        },
+        "audio": {
+            "microfone_embutido": "Não encontrado",
+            "compressao_audio": "Não encontrado"
+        },
+        "rede": {
+            "interface_rede": "Não encontrado",
+            "throughput": "Não encontrado",
+            "protocolos": "Não encontrado",
+            "onvif": "Não encontrado",
+            "navegador": [
+                "es"
+            ]
+        },
+        "inteligencia": {
+            "deteccao_movimento": "Sim (4 regiões distintas configuráveis",
+            "regiao_interesse": "4 áreas",
+            "protecao_perimetral": "Não encontrado"
+        },
+        "energia": {
+            "tensao_alimentacao": "12 Vdc 24 Vac/PoE+, ou PoE (com suporte a ePoE",
+            "consumo_potencia": "<24,3 W"
+        },
+        "fisico": {
+            "grau_protecao": "IP67",
+            "dimensoes": "135.1 mm × 134.2 mm x 345.6 mm",
+            "peso": "Não encontrado",
+            "temperatura_operacao": {
+                "min": 40,
+                "max": 65,
+                "unidade": "°C"
+            }
+        },
+        "fabricante": "Intelbras",
+        "modelo_produto": "VIP 94120 ULTRA IA, VIP 94120 ULTRA IA FT",
+        "tags": [
+            "Inteligência Artificial",
+            "PoE"
+        ],
+        "distancia_focal": "32 mm (Fixa)"
+    },
+    "datasheet-vipm-9414-3d-pt.pdf": {
+        "video": {
+            "resolucao_maxima": "3.7 MP (2560x1440)",
+            "pixels_efetivos": "3.7 MP (2560x1440)",
+            "sensor_imagem": "Não encontrado",
+            "wdr": "Não encontrado",
+            "compressao_video": "H.265; H.264; H.264H",
+            "taxa_de_bits": "Não encontrado"
+        },
+        "audio": {
+            "microfone_embutido": "Não encontrado",
+            "compressao_audio": "Não encontrado"
+        },
+        "rede": {
+            "interface_rede": "Não encontrado",
+            "throughput": "Não encontrado",
+            "protocolos": "Não encontrado",
+            "onvif": "Não encontrado",
+            "navegador": "Não encontrado"
+        },
+        "inteligencia": {
+            "deteccao_movimento": "Não encontrado",
+            "regiao_interesse": "Não encontrado",
+            "protecao_perimetral": "Não encontrado"
+        },
+        "energia": {
+            "tensao_alimentacao": "Não encontrado",
+            "consumo_potencia": "máximo"
+        },
+        "fisico": {
+            "grau_protecao": "IP67",
+            "dimensoes": "197.7mm x 71.0mm × 72.1mm",
+            "peso": "Não encontrado",
+            "temperatura_operacao": {
+                "min": 40,
+                "max": 65,
+                "unidade": "°C"
+            }
+        },
+        "fabricante": "Intelbras",
+        "modelo_produto": "VIPM 9414, VIPM 9414 3D fornece imagem de",
+        "tags": [
+            "PoE"
+        ],
+        "distancia_focal": "2.0 mm (Fixa)"
+    },
+    "datasheet-vipw-1210-c-pt.pdf": {
+        "video": {
+            "resolucao_maxima": "2.1 MP (1920x1080)",
+            "pixels_efetivos": "2.1 MP (1920x1080)",
+            "sensor_imagem": "2 Megapixels 1/3.2” CMOS",
+            "wdr": "Não encontrado",
+            "compressao_video": "H.265 / H.264 / H.264B / H.264H",
+            "taxa_de_bits": "CBR / VBR"
+        },
+        "audio": {
+            "microfone_embutido": "Sim",
+            "compressao_audio": "Não encontrado"
+        },
+        "rede": {
+            "interface_rede": "Não encontrado",
+            "throughput": "229 Mbps",
+            "protocolos": [
+                "IPv4",
+                "IPv6",
+                "HTTPS",
+                "SMTP",
+                "TCP",
+                "UDP",
+                "ARP",
+                "RTP",
+                "RTSP",
+                "RTCP",
+                "DHCP",
+                "DNS",
+                "DDNS",
+                "NTP"
+            ],
+            "onvif": "Não encontrado",
+            "navegador": [
+                "es"
+            ]
+        },
+        "inteligencia": {
+            "deteccao_movimento": "Até 4 áreas",
+            "regiao_interesse": "Até 4 áreas",
+            "protecao_perimetral": "Não encontrado"
+        },
+        "energia": {
+            "tensao_alimentacao": "PoE",
+            "consumo_potencia": "Mínimo: 1.49 W"
+        },
+        "fisico": {
+            "grau_protecao": "Não encontrado",
+            "dimensoes": "68 mm x 31.9 mm x 119.2 mm",
+            "peso": "Não encontrado",
+            "temperatura_operacao": {
+                "min": 10,
+                "max": 45,
+                "unidade": "°C"
+            }
+        },
+        "fabricante": "Intelbras",
+        "modelo_produto": "VIPW 1210, VIPW 1210 C - Incorpora produto homologado pela Anatel sob os",
+        "tags": [
+            "PoE"
+        ],
+        "distancia_focal": "2.8 mm (Fixa)"
+    },
+    "DS-2CD2H83G2-IZS_Datasheet_V5.5.113_20230303.pdf": {
+        "video": {
+            "resolucao_maxima": "8.3 MP (3840x2160)",
+            "pixels_efetivos": "8.3 MP (3840x2160)",
+            "compressao_video": "compression technology",
+            "resolucao": "Não encontrado",
+            "fps": "Não encontrado"
+        },
+        "audio": {},
+        "rede": {
+            "interface_rede": "SNMP, WebSocket",
+            "throughput": "H.264 Type",
+            "protocolos": "Não encontrado",
+            "onvif": "Não encontrado",
+            "navegador": [
+                "ncy and effectiveness"
+            ]
+        },
+        "inteligencia": {
+            "line_crossing": "Sim",
+            "intrusion": "Sim",
+            "people_counting": "Não",
+            "face_detection": "Sim"
+        },
+        "energia": {
+            "alimentacao": "SNMP, WebSocket"
+        },
+        "fisico": {
+            "grau_protecao": "and vandal-resistant",
+            "dimensoes": "Não encontrado"
+        },
+        "fabricante": "Hikvision",
+        "modelo_produto": "DS-2CD2H83G2-IZS",
+        "tags": [
+            "Detecção Facial",
+            "PoE"
+        ],
+        "distancia_focal": "12 mm (Fixa)"
+    },
+    "DS-2CD2T47G3-LIS2UY_SLRB_Datasheet_20250411.pdf": {
+        "video": {
+            "resolucao_maxima": "4.1 MP (2688x1520)",
+            "pixels_efetivos": "4.1 MP (2688x1520)",
+            "compressao_video": "Não encontrado",
+            "resolucao": "Não encontrado",
+            "fps": "Não encontrado"
+        },
+        "audio": {},
+        "rede": {
+            "interface_rede": "SNMP",
+            "throughput": "H.264 Type",
+            "protocolos": "Não encontrado",
+            "onvif": "Não encontrado",
+            "navegador": [
+                "ndly lighting. F1.0 super-aperture collects more light to produce brighter images. Advanced sensor technology can vastly"
+            ]
+        },
+        "inteligencia": {
+            "line_crossing": "Não",
+            "intrusion": "Não",
+            "people_counting": "Não",
+            "face_detection": "Não"
+        },
+        "energia": {
+            "alimentacao": "SNMP"
+        },
+        "fisico": {
+            "grau_protecao": "IEC 60529-2013",
+            "dimensoes": "Não encontrado"
+        },
+        "fabricante": "Hikvision",
+        "modelo_produto": "DS-2CD2T47G3-LIS2UY",
+        "tags": [
+            "PoE"
+        ],
+        "distancia_focal": "4 mm (Fixa)"
+    },
+    "DS-2CD2T67G3-LIS2UY_SLRB_Datasheet_20250411.pdf": {
+        "video": {
+            "resolucao_maxima": "5.8 MP (3200x1800)",
+            "pixels_efetivos": "5.8 MP (3200x1800)",
+            "compressao_video": "Não encontrado",
+            "resolucao": "Não encontrado",
+            "fps": "Não encontrado"
+        },
+        "audio": {},
+        "rede": {
+            "interface_rede": "SNMP",
+            "throughput": "H.264 Type",
+            "protocolos": "Não encontrado",
+            "onvif": "Não encontrado",
+            "navegador": [
+                "ndly lighting. F1.0 super-aperture collects more light to produce brighter images. Advanced sensor technology can vastly"
+            ]
+        },
+        "inteligencia": {
+            "line_crossing": "Não",
+            "intrusion": "Não",
+            "people_counting": "Não",
+            "face_detection": "Não"
+        },
+        "energia": {
+            "alimentacao": "SNMP"
+        },
+        "fisico": {
+            "grau_protecao": "IEC 60529-2013",
+            "dimensoes": "Não encontrado"
+        },
+        "fabricante": "Hikvision",
+        "modelo_produto": "DS-2CD2T67G3-LIS2UY",
+        "tags": [
+            "PoE"
+        ],
+        "distancia_focal": "4 mm (Fixa)"
+    },
+    "DS-2DE4415IWG-E_B_Datasheet_20250220.pdf": {
+        "video": {
+            "resolucao_maxima": "3.7 MP (2560x1440)",
+            "pixels_efetivos": "3.7 MP (2560x1440)",
+            "compressao_video": "Não encontrado",
+            "resolucao": "Não encontrado",
+            "fps": "Não encontrado"
+        },
+        "audio": {},
+        "rede": {
+            "interface_rede": "Bonjour",
+            "throughput": "Não encontrado",
+            "protocolos": "Não encontrado",
+            "onvif": "Não encontrado",
+            "navegador": [
+                "s of cameras can be widely used for wide ranges of high-definition",
+                "such as the rivers",
+                "roads",
+                "railways",
+                "airports"
+            ]
+        },
+        "inteligencia": {
+            "line_crossing": "Sim",
+            "intrusion": "Sim",
+            "people_counting": "Não",
+            "face_detection": "Não"
+        },
+        "energia": {
+            "alimentacao": "Bonjour"
+        },
+        "fisico": {
+            "grau_protecao": "IEC 60529-2013),TVS 6000 V lightning protection, surge protection and voltage",
+            "dimensoes": "Não encontrado"
+        },
+        "fabricante": "Hikvision",
+        "modelo_produto": "Não encontrado",
+        "tags": [
+            "PoE"
+        ],
+        "distancia_focal": "72 mm (Fixa)"
+    },
+    "exemplo.pdf": {
+        "video": {
+            "resolucao_maxima": "4.1 MP (2688x1520)",
+            "pixels_efetivos": "4.1 MP (2688x1520)",
+            "sensor_imagem": "1/1.8” 4 megapixels CMOS",
+            "wdr": "120 dB",
+            "compressao_video": "Smart H.265+/Smart H.264+/H.265/H.264/H.264H/H.264B/MJPEG (Apenas suportado",
+            "taxa_de_bits": "H.264: 32 kpbs ~ 6144 kbps"
+        },
+        "audio": {
+            "microfone_embutido": "Não encontrado",
+            "compressao_audio": "Não encontrado"
+        },
+        "rede": {
+            "interface_rede": "Não encontrado",
+            "throughput": "48 Mbps",
+            "protocolos": "Não encontrado",
+            "onvif": "Não encontrado",
+            "navegador": [
+                "es"
+            ]
+        },
+        "inteligencia": {
+            "deteccao_movimento": "Sim (4 áreas, retangular",
+            "regiao_interesse": "Sim (4 áreas",
+            "protecao_perimetral": "Cruzamento de linha e área de intrusão"
+        },
+        "energia": {
+            "tensao_alimentacao": "12 VDC / PoE",
+            "consumo_potencia": "Básico: 2.0 W (12 VDC); 3.0 W (PoE"
+        },
+        "fisico": {
+            "grau_protecao": "IP67",
+            "dimensoes": "197.9 mm x 80.2 mm x 76.2 mm",
+            "peso": "Não encontrado",
+            "temperatura_operacao": {
+                "min": 40,
+                "max": 60,
+                "unidade": "°C"
+            }
+        },
+        "fabricante": "Intelbras",
+        "modelo_produto": "VIP 3430 SC IA, VIP 3430 SC IA FT",
+        "tags": [
+            "Inteligência Artificial",
+            "PoE",
+            "Super Color"
+        ],
+        "distancia_focal": "3.6 mm (Fixa)"
+    },
+    "Ficha técnica VIP 5440 IA_VIP 5440 D IA_0.pdf": {
+        "video": {
+            "resolucao_maxima": "4.1 MP (2688x1520)",
+            "pixels_efetivos": "4.1 MP (2688x1520)",
+            "sensor_imagem": "1/2.9” CMOS (Starlight",
+            "wdr": "120dB)/ HLC",
+            "compressao_video": "H.265 / H.264 / H.264H / H.264B / MJPEG (apenas stream extra",
+            "taxa_de_bits": "Constante / Variável"
+        },
+        "audio": {
+            "microfone_embutido": "Sim",
+            "compressao_audio": "Não encontrado"
+        },
+        "rede": {
+            "interface_rede": "Não encontrado",
+            "throughput": "36 Mbps",
+            "protocolos": [
+                "ARP",
+                "DHCP",
+                "DNS",
+                "Filtro IP",
+                "HTTP",
+                "ICMP",
+                "IGMP",
+                "IPv4",
+                "IPv6",
+                "Multicast",
+                "NAS",
+                "NTP"
+            ],
+            "onvif": "Não encontrado",
+            "navegador": [
+                "es4"
+            ]
+        },
+        "inteligencia": {
+            "deteccao_movimento": "Até 4 áreas, suporta detecção inteligente para pessoas e veículos",
+            "regiao_interesse": "Não encontrado",
+            "protecao_perimetral": "Não encontrado"
+        },
+        "energia": {
+            "tensao_alimentacao": "12 VDC / PoE (802.3af",
+            "consumo_potencia": "Mínimo: 3.8 W (12VDC) / 4.6 W ( PoE"
+        },
+        "fisico": {
+            "grau_protecao": "IP67",
+            "dimensoes": "197.9 mm × 80.2 mm × 76.2 mm",
+            "peso": "Não encontrado",
+            "temperatura_operacao": {
+                "min": 40,
+                "max": 60,
+                "unidade": "°C"
+            }
+        },
+        "fabricante": "Intelbras",
+        "modelo_produto": "VIP 5440 IA VIP 5440 D",
+        "tags": [
+            "Dome",
+            "Inteligência Artificial",
+            "PoE"
+        ],
+        "distancia_focal": "3.6 mm (Fixa)"
+    },
+    "Ficha técnica- VIP 3230 D FC+ AP IA (1) 1.pdf": {
+        "video": {
+            "resolucao_maxima": "2.1 MP (1920x1080)",
+            "pixels_efetivos": "2.1 MP (1920x1080)",
+            "sensor_imagem": "1/2.8” 2 MP Progressive CMOS",
+            "wdr": "120 dB)/ HLC",
+            "compressao_video": "H.265/ H.264/H.264B/H.264H/MJPEG",
+            "taxa_de_bits": "CBR / VBR"
+        },
+        "audio": {
+            "microfone_embutido": "Sim",
+            "compressao_audio": "Não encontrado"
+        },
+        "rede": {
+            "interface_rede": "Não encontrado",
+            "throughput": "Máx",
+            "protocolos": "Não encontrado",
+            "onvif": "Não encontrado",
+            "navegador": [
+                "es"
+            ]
+        },
+        "inteligencia": {
+            "deteccao_movimento": "inteligente",
+            "regiao_interesse": "Até 4 áreas",
+            "protecao_perimetral": "Não encontrado"
+        },
+        "energia": {
+            "tensao_alimentacao": "12 Vdc / PoE",
+            "consumo_potencia": "< 11,5W"
+        },
+        "fisico": {
+            "grau_protecao": "IP67",
+            "dimensoes": "Não encontrado",
+            "peso": "Não encontrado",
+            "temperatura_operacao": {
+                "min": null,
+                "max": null,
+                "unidade": "°C"
+            }
+        },
+        "fabricante": "Intelbras",
+        "modelo_produto": "VIP 3230 D FC+ AP IA VIP 3230 FC+ AP IA 44 m 53, VIP 3230 FC+ AP IA VIP 3230 D FC+ AP",
+        "tags": [
+            "Dome",
+            "Full Color / Super Color",
+            "Full Color+",
+            "Inteligência Artificial",
+            "PoE",
+            "Smart Motion Detection"
+        ],
+        "distancia_focal": "2.8 mm (Fixa)"
+    },
+    "Ficha técnica- VIP 3230 D SC IA_0_0.pdf": {
+        "video": {
+            "resolucao_maxima": "2.1 MP (1920x1080)",
+            "pixels_efetivos": "2.1 MP (1920x1080)",
+            "sensor_imagem": "1/2.9” 2 MP Progressive CMOS",
+            "wdr": "120 dB)/ HLC",
+            "compressao_video": "H.265/ H.264/H.264B/H.264H/MJPEG",
+            "taxa_de_bits": "CBR / VBR"
+        },
+        "audio": {
+            "microfone_embutido": "Sim",
+            "compressao_audio": "Não encontrado"
+        },
+        "rede": {
+            "interface_rede": "Não encontrado",
+            "throughput": "Máx",
+            "protocolos": "Não encontrado",
+            "onvif": "Não encontrado",
+            "navegador": [
+                "es"
+            ]
+        },
+        "inteligencia": {
+            "deteccao_movimento": "Humanos e veículos",
+            "regiao_interesse": "Até 4 áreas",
+            "protecao_perimetral": "Não encontrado"
+        },
+        "energia": {
+            "tensao_alimentacao": "12 Vdc / PoE",
+            "consumo_potencia": "< 5,3 W"
+        },
+        "fisico": {
+            "grau_protecao": "IP67",
+            "dimensoes": "Não encontrado",
+            "peso": "Não encontrado",
+            "temperatura_operacao": {
+                "min": null,
+                "max": null,
+                "unidade": "°C"
+            }
+        },
+        "fabricante": "Intelbras",
+        "modelo_produto": "VIP 3230 D SC IA VIP 3230 SC IA 47, VIP 3230 SC IA VIP 3230 D SC",
+        "tags": [
+            "Dome",
+            "Inteligência Artificial",
+            "PoE",
+            "Smart Motion Detection",
+            "Super Color"
+        ],
+        "distancia_focal": "2.8 mm (Fixa)"
+    },
+    "Novo Datasheet - VIP 5432 SD IA FT 3_0.pdf": {
+        "video": {
+            "resolucao_maxima": "3.7 MP (2560x1440)",
+            "pixels_efetivos": "3.7 MP (2560x1440)",
+            "sensor_imagem": "1/2.8” 4 megapixels CMOS",
+            "wdr": "120 dB",
+            "compressao_video": "H.265+/H.265/H.264+/H.264/MJPEG (stream extra",
+            "taxa_de_bits": "H.264: 3 kpbs ~ 20480 kbps"
+        },
+        "audio": {
+            "microfone_embutido": "Não encontrado",
+            "compressao_audio": "Não encontrado"
+        },
+        "rede": {
+            "interface_rede": "Não encontrado",
+            "throughput": "64 Mbps",
+            "protocolos": "Não encontrado",
+            "onvif": "Não encontrado",
+            "navegador": [
+                "es"
+            ]
+        },
+        "inteligencia": {
+            "deteccao_movimento": "Sim",
+            "regiao_interesse": "Sim",
+            "protecao_perimetral": "Cruzamento de linha. Área de intrusão. Alarme causado por tipo de alvo (humano ou"
+        },
+        "energia": {
+            "tensao_alimentacao": "24 Vdc / 2.5 A ou PoE+ (802.3at",
+            "consumo_potencia": "13 W, 22 W com PTZ e IR ligado"
+        },
+        "fisico": {
+            "grau_protecao": "IP67",
+            "dimensoes": "Não encontrado",
+            "peso": "Não encontrado",
+            "temperatura_operacao": {
+                "min": 40,
+                "max": 70,
+                "unidade": "°C"
+            }
+        },
+        "fabricante": "Intelbras",
+        "modelo_produto": "VIP 5432 SD IA, VIP 5432 SD IA FT",
+        "tags": [
+            "Inteligência Artificial",
+            "PoE",
+            "Speed Dome"
+        ],
+        "distancia_focal": "Não encontrado"
+    },
+    "Novo Datasheet - VIP 9180 Pan+ FT.pdf": {
+        "video": {
+            "resolucao_maxima": "14.9 MP (5520x2700)",
+            "pixels_efetivos": "14.9 MP (5520x2700)",
+            "sensor_imagem": "4 sensores de 1/1.8” 4 megapixels CMOS",
+            "wdr": "120db) / HLC",
+            "compressao_video": "H.265/H.264/H.264H/H.264B/MJPEG",
+            "taxa_de_bits": "CBR / VBR"
+        },
+        "audio": {
+            "microfone_embutido": "Não encontrado",
+            "compressao_audio": "Não encontrado"
+        },
+        "rede": {
+            "interface_rede": "Não encontrado",
+            "throughput": "Não encontrado",
+            "protocolos": "Não encontrado",
+            "onvif": "Não encontrado",
+            "navegador": [
+                "es"
+            ]
+        },
+        "inteligencia": {
+            "deteccao_movimento": "Sim, com filtro de pessoas e veículos (4 regiões distintas de detecção e configuração",
+            "regiao_interesse": "4 áreas",
+            "protecao_perimetral": "Não encontrado"
+        },
+        "energia": {
+            "tensao_alimentacao": "12 Vdc, ou 24 Vac, ou PoE+ (802.3at",
+            "consumo_potencia": "<24.2 W"
+        },
+        "fisico": {
+            "grau_protecao": "IP67",
+            "dimensoes": "172.5 mm x 120.5 mm x 298.3 mm",
+            "peso": "Não encontrado",
+            "temperatura_operacao": {
+                "min": 40,
+                "max": 60,
+                "unidade": "°C"
+            }
+        },
+        "fabricante": "Intelbras",
+        "modelo_produto": "VIP 9180 Pan, VIP 9180 Pan+ FT",
+        "tags": [
+            "Panorâmica",
+            "PoE"
+        ],
+        "distancia_focal": "2.8 mm (Fixa)"
+    }
+}
