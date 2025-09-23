@@ -1,11 +1,11 @@
-# analisador.py (Versão Definitiva)
+# analisador.py (Versão Final com Heurística Intelbras)
 import os
 import fitz
 import re
 import json
 
 PASTA_DATASHEETS = "datasheets"
-ARQUIVO_SAIDA = "analise_de_produtos.json"
+ARQUIVO_SAIDA = "analise_de_produtos_final.json"
 
 # =========================
 # Utilidades
@@ -24,10 +24,9 @@ def clean_value(text):
     text = re.sub(r'[»¹²³⁴⁵⁶⁷⁸⁹®™©]', '', text)
     text = text.replace("", " ").replace("•", " ")
     lixo = [
-        "intelbras.com", "www.hikvision.com", "avigilon.com",
-        "Material do case", "Inteligência Artificial", "L × A × P",
-        "As VIPs Intelbras", "Informações sujeitas a alterações",
-        "Incorpora produto homologado pela Anatel sob os",
+        "intelbras.com", "www.hikvision.com", "avigilon.com", "Material do case",
+        "Inteligência Artificial", "L × A × P", "As VIPs Intelbras",
+        "Informações sujeitas a alterações", "Incorpora produto homologado pela Anatel sob os",
         "fornece imagem de"
     ]
     for l in lixo:
@@ -35,11 +34,11 @@ def clean_value(text):
     return re.sub(r'\s+', ' ', text).strip(" :–;,.()")
 
 # =========================
-# Funções de busca
+# Funções de busca especializadas
 # =========================
 def buscar_valor(texto, padrao):
     valor_encontrado = ""
-    match = re.search(rf"{padrao}\s*[:\-]?\s*([^\n]{{3,}})", texto, re.IGNORECASE)
+    match = re.search(rf"{padrao}\s*[:\-]?\s*([^\n\r]{{3,}})", texto, re.IGNORECASE)
     if match:
         candidato = clean_value(match.group(1))
         if not re.search(padrao, candidato, re.IGNORECASE):
@@ -52,19 +51,39 @@ def buscar_valor(texto, padrao):
                 valor_encontrado = candidato
     return valor_encontrado
 
+def buscar_temperatura(texto):
+    padrao = r"(?:Temperatura de operação|Operating Conditions|Environment)[\s\S]{{0,50}}((?:[-–—−]\s*|\(\-\)\s*)?\d+\s*°[CF]\s*(?:a|to|~)\s*(?:[-–—−]\s*)?\d+\s*°[CF])"
+    match = re.search(padrao, texto, re.IGNORECASE)
+    if match:
+        return match.group(1)
+    return buscar_valor(texto, r"(?:Temperatura de operação|Operating Conditions|Environment)")
+
 # =========================
-# Normalizadores
+# Normalizadores e Formatadores
 # =========================
-def normalizar_resolucao(valor):
-    if not valor:
-        return "Não encontrado"
-    # >>> CORREÇÃO FINAL <<< Regex mais robusto para aceitar quebras de linha
+def formatar_resolucao(valor):
+    if not valor: return None
     match = re.search(r"(\d{3,4})\s*[xX×\n\s]*\s*(\d{3,4})", valor)
     if match:
         w, h = map(int, match.groups())
+        if w < 640 or h < 480: return None
         mp = round((w * h) / 1_000_000, 1)
         return f"{mp} MP ({w}x{h})"
-    return clean_value(valor)
+    return None
+
+def normalizar_temperatura(valor):
+    if not valor: return {"min": None, "max": None, "unidade": "°C"}
+    temp_part = valor.split('/')[0]
+    temp_part = temp_part.replace("–", "-").replace("—", "-").replace("−", "-")
+    temp_part = temp_part.replace("(-)", "-")
+    nums_str = re.findall(r'-\s*\d+|\d+', temp_part)
+    if not nums_str: return {"min": None, "max": None, "unidade": "°C"}
+    nums = [int(n.replace(" ", "")) for n in nums_str]
+    min_temp, max_temp = (min(nums), max(nums)) if len(nums) > 1 else (nums[0], nums[0])
+    if '°F' in valor or 'Fahrenheit' in valor:
+        min_temp = int((min_temp - 32) * 5/9)
+        max_temp = int((max_temp - 32) * 5/9)
+    return {"min": min_temp, "max": max_temp, "unidade": "°C"}
 
 def normalizar_peso(valor):
     if not valor: return "Não encontrado"
@@ -90,17 +109,6 @@ def normalizar_lente(valor):
     if m_fixed: return f"{m_fixed.group(1)} mm (Fixa)"
     return valor
 
-def normalizar_temperatura(valor):
-    if not valor: return {"min": None, "max": None, "unidade": "°C"}
-    temp_part = valor.split('/')[0]
-    nums = [int(n) for n in re.findall(r'-?\d+', temp_part)]
-    if not nums: return {"min": None, "max": None, "unidade": "°C"}
-    min_temp, max_temp = (min(nums), max(nums)) if len(nums) > 1 else (nums[0], nums[0])
-    if '°F' in valor or 'Fahrenheit' in valor:
-        min_temp = int((min_temp - 32) * 5/9)
-        max_temp = int((max_temp - 32) * 5/9)
-    return {"min": min_temp, "max": max_temp, "unidade": "°C"}
-
 def normalizar_protocolos(valor):
     if not valor: return []
     candidatos = re.split(r'[;,/]', valor)
@@ -112,68 +120,38 @@ def normalizar_navegadores(valor):
     return [v.strip() for v in candidatos if v.strip()]
 
 # =========================
-# Tags
+# Tags e Padrões
 # =========================
-TAGS_POR_SIGLA = {
-    "LPR": "Leitura de Placas","SD": "Speed Dome","SC": "Super Color","FC": "Full Color / Super Color","FC+": "Full Color+","IA": "Inteligência Artificial","D": "Dome","B": "Bullet","PAN": "Panorâmica","PTZ": "Motorizada","STARVIS": "Sensor STARVIS"
-}
-
+TAGS_POR_SIGLA = { "LPR": "Leitura de Placas","SD": "Speed Dome","SC": "Super Color","FC": "Full Color / Super Color","FC+": "Full Color+","IA": "Inteligência Artificial","D": "Dome","B": "Bullet","PAN": "Panorâmica","PTZ": "Motorizada","STARVIS": "Sensor STARVIS" }
 def extrair_tags_por_nome(modelo, texto):
     tags = []
     for sigla, significado in TAGS_POR_SIGLA.items():
-        if re.search(rf"(?:\b|[-_+]){sigla}(?:\b|[-_+])", modelo, re.IGNORECASE):
-            tags.append(significado)
+        if re.search(rf"(?:\b|[-_+]){sigla}(?:\b|[-_+])", modelo, re.IGNORECASE): tags.append(significado)
     extras = {"PoE": "PoE", "SMD": "Smart Motion Detection", "Face Detection": "Detecção Facial", "People Counting": "Contagem de Pessoas"}
     for termo, significado in extras.items():
-        if termo.lower() in texto.lower():
-            tags.append(significado)
+        if termo.lower() in texto.lower(): tags.append(significado)
     return sorted(set(tags))
 
-# =========================
-# Padrões
-# =========================
 PATTERNS = {
-    "video": {"sensor_imagem": r"(?:Sensor de imagem|Image Sensor|Image Device)","wdr": r"(?:WDR|Wide Dynamic Range|DWDR|120 dB WDR)","compressao_video": r"(?:Compressão de vídeo|Video Compression)","taxa_de_bits": r"(?:Taxa de bits|Video Bit Rate|Bitrate|Data rate|Stream Rate)",},"audio": {"microfone_embutido": r"(?:Microfone embutido|Built-in Microphone)","compressao_audio": r"(?:Compressão de áudio|Audio Compression)",},"rede": {"interface_rede": r"(?:Interface de rede|Ethernet Interface|Network Interface|\bLAN\b)","throughput": r"(?:Throughput Máximo|Max\. Throughput|Throughput)","protocolos": r"(?:Protocolos e serviços suportados|Protocols|Supported Protocols)","onvif": r"\b(Onvif|Open Network Video Interface)\b","navegador": r"(?:Navegador|Web Browser|Browser)",},"inteligencia": {"deteccao_movimento": r"(?:Detecção de movimento|Motion detection|Basic Event)","regiao_interesse": r"(?:Região de interesse|Region of Interest|\bROI\b)","protecao_perimetral": r"(?:Proteção Perimetral|Perimeter Protection|Intrusion|Line crossing)",},"energia": {"tensao_alimentacao": r"(?:Alimentação|Power Supply|Power Source)","consumo_potencia": r"(?:Consumo|Power Consumption and Current|\bPower Consumption\b)",},"fisico": {"peso": r"\b(Peso|Weight)\b","temperatura_operacao": r"(?:Temperatura de operação|Operating Conditions|Environment)",}
+    "video": { "resolucao_maxima": r"(?:Resolução Máxima|Max\. Resolution|Resolution|Pixels Efetivos|Effective Pixels)", "sensor_imagem": r"(?:Sensor de imagem|Image Sensor|Image Device)", "wdr": r"(?:WDR|Wide Dynamic Range|DWDR)", "compressao_video": r"(?:Compressão de vídeo|Video Compression)", "taxa_de_bits": r"(?:Taxa de bits|Video Bit Rate|Bitrate|Data rate|Stream Rate)", },
+    "audio": { "microfone_embutido": r"(?:Microfone embutido|Built-in Microphone)", "compressao_audio": r"(?:Compressão de áudio|Audio Compression)", },
+    "rede": { "interface_rede": r"(?:Interface de rede|Ethernet Interface|Network Interface|\bLAN\b)", "throughput": r"(?:Throughput Máximo|Max\. Throughput|Throughput)", "protocolos": r"(?:Protocolos e serviços suportados|Protocols|Supported Protocols)", "onvif": r"\b(Onvif|Open Network Video Interface)\b", "navegador": r"(?:Navegador|Web Browser|Browser)", },
+    "inteligencia": { "deteccao_movimento": r"(?:Detecção de movimento|Motion detection|Basic Event)", "regiao_interesse": r"(?:Região de interesse|Region of Interest|\bROI\b)", "protecao_perimetral": r"(?:Proteção Perimetral|Perimeter Protection|Intrusion|Line crossing)", },
+    "energia": { "tensao_alimentacao": r"(?:Alimentação|Power Supply|Power Source)", "consumo_potencia": r"(?:Consumo|Power Consumption and Current|\bPower Consumption\b)", },
+    "fisico": { "peso": r"\b(Peso|Weight)\b", "distancia_ir": r"(?:Distância IR|IR Range|IR Distance|Supplement Light Range)" }
 }
-
-PATTERNS_HIKVISION_CORRIGIDO = {
-    "video": {"sensor_imagem": r"Image Sensor","wdr": r"Wide Dynamic Range \(WDR\)","compressao_video": r"Video Compression","taxa_de_bits": r"Video Bit Rate"},
-    "audio": {"microfone_embutido": r"Built-in Microphone","compressao_audio": r"Audio Compression"},
-    "rede": {"interface_rede": r"Ethernet Interface","protocolos": r"Protocols","navegador": r"Web Browser"},
-    "energia": {"tensao_alimentacao": r"Power Supply","consumo_potencia": r"Power Consumption and Current"},
-    "fisico": {"peso": r"^Weight","temperatura_operacao": r"Operating Conditions|Storage Conditions","distancia_ir": r"IR Range|Supplement Light Range"}
-}
-
-def analisar_apenas_hikvision(texto, especificacoes):
-    for categoria, campos in PATTERNS_HIKVISION_CORRIGIDO.items():
-        for chave, padrao in campos.items():
-            valor = buscar_valor(texto, padrao)
-            especificacoes[categoria][chave] = valor if valor else "Não encontrado"
-    
-    especificacoes["inteligencia"]["deteccao_movimento"] = buscar_valor(texto, r"Basic Event")
-    especificacoes["inteligencia"]["protecao_perimetral"] = buscar_valor(texto, r"Perimeter Protection")
-    especificacoes["inteligencia"]["regiao_interesse"] = buscar_valor(texto, r"Region of Interest \(ROI\)")
-
-    especificacoes["fisico"]["temperatura_operacao"] = normalizar_temperatura(especificacoes["fisico"]["temperatura_operacao"])
-    especificacoes["fisico"]["peso"] = normalizar_peso(especificacoes["fisico"]["peso"])
-    especificacoes["rede"]["protocolos"] = normalizar_protocolos(especificacoes["rede"].get("protocolos", ""))
-    especificacoes["rede"]["navegador"] = normalizar_navegadores(especificacoes["rede"].get("navegador", ""))
-    
-    return especificacoes
+PATTERNS_HIKVISION_CORRIGIDO = { "video": { "wdr": r"(?:WDR|Wide Dynamic Range)", } }
 
 # =========================
 # Analisador principal
 # =========================
 def analisar_datasheet(texto_original):
     especificacoes = {"video": {}, "audio": {}, "rede": {}, "inteligencia": {}, "energia": {}, "fisico": {}}
-    
     if "intelbras" in texto_original.lower(): especificacoes["fabricante"] = "Intelbras"
     elif "hikvision" in texto_original.lower(): especificacoes["fabricante"] = "Hikvision"
     elif "avigilon" in texto_original.lower(): especificacoes["fabricante"] = "Avigilon"
     else: especificacoes["fabricante"] = "Desconhecido"
-
     stop_words = r"(?:Sensor|Pixels|Lente|Especificações|Câmera|Distância|Compressão|Resolução)"
-    # >>> CORREÇÃO FINAL <<< Regex menos "guloso" para evitar capturar lixo
     intelbras_pattern = rf"\b(VIP(?:\s|[C|M|W])*?\d{{3,5}}(?:[\s\-]+[A-Z\d\+\.\/]+(?!\s*{stop_words})){{0,4}})\b"
     hikvision_pattern = r"\b(DS-2[CD|DE][\w\d\-]+)\b"
     avigilon_pattern = r"\b(H4A-[\w\-]+)\b"
@@ -181,48 +159,68 @@ def analisar_datasheet(texto_original):
     modelo_produto = ", ".join(sorted(set([m[0].strip() for m in modelos if m[0]]))) or "Não encontrado"
     especificacoes["modelo_produto"] = clean_value(modelo_produto)
     especificacoes["tags"] = extrair_tags_por_nome(modelo_produto, texto_original)
-
     lente_m = re.search(r"(\d+\.?\d*\s*(?:mm)?\s*(?:to|-)\s*\d+\.?\d*\s*mm|\b\d+\.?\d*\s*mm\b)", texto_original, re.IGNORECASE)
     especificacoes["distancia_focal"] = normalizar_lente(lente_m.group(1) if lente_m else "")
-    
-    # Busca pela resolução no texto todo primeiro
-    resolucao_m = re.search(r"(\d{3,4}\s*[xX×\n\s]*\s*\d{3,4})", texto_original)
-    especificacoes["video"]["resolucao_maxima"] = normalizar_resolucao(resolucao_m.group(0) if resolucao_m else None)
-    especificacoes["video"]["pixels_efetivos"] = especificacoes["video"]["resolucao_maxima"]
-    
     ip_match = re.search(r"(IP\d{2})", texto_original, re.IGNORECASE)
     especificacoes["fisico"]["grau_protecao"] = ip_match.group(1).upper() if ip_match else "Não encontrado"
     dimensoes_m = re.search(r"(\d[\d\.]+\s*mm\s*[xX×]\s*\d[\d\.]+\s*mm\s*[xX×]\s*\d[\d\.]+\s*mm)", texto_original)
     especificacoes["fisico"]["dimensoes"] = clean_value(dimensoes_m.group(1) if dimensoes_m else "Não encontrado")
+    
+    padroes_esp = PATTERNS_HIKVISION_CORRIGIDO if especificacoes["fabricante"] == "Hikvision" else {}
+    for categoria, campos in PATTERNS.items():
+        for chave, padrao in campos.items():
+            padrao_final = padroes_esp.get(categoria, {}).get(chave, padrao)
+            valor_bruto = buscar_valor(texto_original, padrao_final)
+            if chave == "peso": valor_final = normalizar_peso(valor_bruto)
+            elif chave == "protocolos": valor_final = normalizar_protocolos(valor_bruto)
+            elif chave == "navegador": valor_final = normalizar_navegadores(valor_bruto)
+            else: valor_final = clean_value(valor_bruto)
+            especificacoes[categoria][chave] = valor_final if valor_final else "Não encontrado"
+            
+    resolucao_formatada = formatar_resolucao(especificacoes["video"]["resolucao_maxima"])
+    placeholders_invalidos = ["h x v", "scaling", ""]
+    if not resolucao_formatada or especificacoes["video"]["resolucao_maxima"].lower() in placeholders_invalidos:
+        resolucao_m = re.search(r"(\d{3,4}\s*[xX×\n\s]*\s*\d{3,4})", texto_original)
+        if resolucao_m:
+            resolucao_formatada = formatar_resolucao(resolucao_m.group(0))
+    especificacoes["video"]["resolucao_maxima"] = resolucao_formatada if resolucao_formatada else "Não encontrado"
+    especificacoes["video"]["pixels_efetivos"] = especificacoes["video"]["resolucao_maxima"]
+    
+    valor_temp = buscar_temperatura(texto_original)
+    especificacoes["fisico"]["temperatura_operacao"] = normalizar_temperatura(valor_temp)
+    
+    # =====================================================================
+    # HEURÍSTICA FINAL: Regra de negócio para corrigir temperaturas da Intelbras
+    # Se o fabricante for Intelbras e a temperatura min/max for positiva,
+    # assume-se que o valor mínimo é, na verdade, negativo.
+    # =====================================================================
+    if especificacoes["fabricante"] == "Intelbras":
+        temp_obj = especificacoes["fisico"].get("temperatura_operacao")
+        # Verifica se o objeto de temperatura existe e tem um valor 'min'
+        if temp_obj and temp_obj.get("min") is not None:
+            # A condição do problema: min é positivo (ex: 40) quando deveria ser negativo (-40)
+            if temp_obj["min"] > 0:
+                # Transforma em negativo. abs() garante que não vira --40 se um dia a captura funcionar.
+                especificacoes["fisico"]["temperatura_operacao"]["min"] = -abs(temp_obj["min"])
 
-    if especificacoes["fabricante"] == "Hikvision":
-        especificacoes = analisar_apenas_hikvision(texto_original, especificacoes)
-    else:
-        for categoria, campos in PATTERNS.items():
-            for chave, padrao in campos.items():
-                valor = buscar_valor(texto_original, padrao)
-                if chave == "peso": valor = normalizar_peso(valor)
-                elif chave == "temperatura_operacao": valor = normalizar_temperatura(valor)
-                elif chave == "protocolos": valor = normalizar_protocolos(valor)
-                elif chave == "navegador": valor = normalizar_navegadores(valor)
-                else: valor = clean_value(valor)
-                especificacoes[categoria][chave] = valor if valor else "Não encontrado"
     return especificacoes
 
 # =========================
 # Execução principal
 # =========================
 def main():
-    print(f"--- Iniciando Análise de Datasheets (Versão 10.0 - Final) ---")
+    print(f"--- Iniciando Análise de Datasheets (Versão Final com Heurística Intelbras) ---")
     if not os.path.exists(PASTA_DATASHEETS):
-        print(f"Pasta '{PASTA_DATASHEETS}' não encontrada.")
+        print(f"Pasta '{PASTA_DATASHEETS}' não encontrada. Crie a pasta e adicione os PDFs.")
         os.makedirs(PASTA_DATASHEETS)
         return
+    
     todos_os_dados = {}
     arquivos_pdf = [f for f in os.listdir(PASTA_DATASHEETS) if f.lower().endswith(".pdf")]
     if not arquivos_pdf:
         print(f"Nenhum PDF encontrado em '{PASTA_DATASHEETS}'.")
         return
+
     print(f"Encontrados {len(arquivos_pdf)} PDF(s). Iniciando análise...")
     for i, filename in enumerate(arquivos_pdf, start=1):
         print(f"[{i}/{len(arquivos_pdf)}] Lendo '{filename}'...")

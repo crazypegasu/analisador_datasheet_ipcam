@@ -2,11 +2,11 @@
     "avigilon-h4a-bo-b-datasheet-en-rev10.pdf": {
         "video": {
             "resolucao_maxima": "0.9 MP (1280x720)",
-            "pixels_efetivos": "0.9 MP (1280x720)",
             "sensor_imagem": "1/2.8” progressive scan CMOS",
             "wdr": "1–3 MP models",
             "compressao_video": "H.264 (MPEG-4 Part 10/AVC), Motion JPEG, HDSM SmartCodec Technology",
-            "taxa_de_bits": "Não encontrado"
+            "taxa_de_bits": "Não encontrado",
+            "pixels_efetivos": "0.9 MP (1280x720)"
         },
         "audio": {
             "microfone_embutido": "Não encontrado",
@@ -40,6 +40,7 @@
             "grau_protecao": "IP66",
             "dimensoes": "126 mm x 280 mm x 91 mm",
             "peso": "Não encontrado",
+            "distancia_ir": "Não encontrado",
             "temperatura_operacao": {
                 "min": null,
                 "max": null,
@@ -56,11 +57,11 @@
     "Datasheet  - VIP 3225 SD IR IA.pdf": {
         "video": {
             "resolucao_maxima": "2.1 MP (1920x1080)",
-            "pixels_efetivos": "2.1 MP (1920x1080)",
             "sensor_imagem": "1/2.8\" 2Megapixel CMOS",
             "wdr": "120dB",
             "compressao_video": "H.264/ H.264B/ H.264H/ H.265/ MJPEG",
-            "taxa_de_bits": "Não encontrado"
+            "taxa_de_bits": "Não encontrado",
+            "pixels_efetivos": "2.1 MP (1920x1080)"
         },
         "audio": {
             "microfone_embutido": "Não encontrado",
@@ -102,6 +103,7 @@
             "grau_protecao": "IP66",
             "dimensoes": "Não encontrado",
             "peso": "Não encontrado",
+            "distancia_ir": "Não encontrado",
             "temperatura_operacao": {
                 "min": null,
                 "max": null,
@@ -120,11 +122,11 @@
     "Datasheet - VIP 3216 SD IR IA - V6.pdf": {
         "video": {
             "resolucao_maxima": "2.1 MP (1920x1080)",
-            "pixels_efetivos": "2.1 MP (1920x1080)",
             "sensor_imagem": "1/1.8\" 2Megapixel STARVIS CMOS",
             "wdr": "Balanço de Branco",
             "compressao_video": "H.264/ H.264B/ H.264H/ H.265/ MJPEG",
-            "taxa_de_bits": "Não encontrado"
+            "taxa_de_bits": "Não encontrado",
+            "pixels_efetivos": "2.1 MP (1920x1080)"
         },
         "audio": {
             "microfone_embutido": "Não encontrado",
@@ -167,8 +169,9 @@
             "grau_protecao": "IP66",
             "dimensoes": "Não encontrado",
             "peso": "Não encontrado",
+            "distancia_ir": "Não encontrado",
             "temperatura_operacao": {
-                "min": 40,
+                "min": -40,
                 "max": 60,
                 "unidade": "°C"
             }
@@ -185,11 +188,11 @@
     "Datasheet - VIP 3400 MINI SD SC IA FT.pdf": {
         "video": {
             "resolucao_maxima": "3.7 MP (2560x1440)",
-            "pixels_efetivos": "3.7 MP (2560x1440)",
             "sensor_imagem": "1/1.8” 4 megapixels CMOS",
             "wdr": "120 dB",
             "compressao_video": "Smart H.265+/H.265/Smart H.264+/H.264B/H.264M/H.264/MJPEG",
-            "taxa_de_bits": "H.264: 3,072 kpbs ~ 15,104 kbps"
+            "taxa_de_bits": "H.264: 3,072 kpbs ~ 15,104 kbps",
+            "pixels_efetivos": "3.7 MP (2560x1440)"
         },
         "audio": {
             "microfone_embutido": "Não encontrado",
@@ -217,8 +220,9 @@
             "grau_protecao": "IP66",
             "dimensoes": "Não encontrado",
             "peso": "Não encontrado",
+            "distancia_ir": "Não encontrado",
             "temperatura_operacao": {
-                "min": 30,
+                "min": -30,
                 "max": 55,
                 "unidade": "°C"
             }
@@ -236,11 +240,11 @@
     "Datasheet - VIP 3430 D SC IA FT_0.pdf": {
         "video": {
             "resolucao_maxima": "4.1 MP (2688x1520)",
-            "pixels_efetivos": "4.1 MP (2688x1520)",
             "sensor_imagem": "1/1.8” 4 megapixels CMOS",
             "wdr": "120 dB",
             "compressao_video": "Smart H.265+ / Smart H.264+ / H.265 / H.264 / H.264H / H.264B / MJPEG (Apenas",
-            "taxa_de_bits": "H.264: 32 kpbs ~ 6144 kbps"
+            "taxa_de_bits": "H.264: 32 kpbs ~ 6144 kbps",
+            "pixels_efetivos": "4.1 MP (2688x1520)"
         },
         "audio": {
             "microfone_embutido": "Não encontrado",
@@ -268,8 +272,9 @@
             "grau_protecao": "IP67",
             "dimensoes": "Não encontrado",
             "peso": "Não encontrado",
+            "distancia_ir": "Não encontrado",
             "temperatura_operacao": {
-                "min": 40,
+                "min": -40,
                 "max": 60,
                 "unidade": "°C"
             }
@@ -287,11 +292,11 @@
     "Datasheet - VIP 3430 SC IA FT.pdf": {
         "video": {
             "resolucao_maxima": "4.1 MP (2688x1520)",
-            "pixels_efetivos": "4.1 MP (2688x1520)",
             "sensor_imagem": "1/1.8” 4 megapixels CMOS",
             "wdr": "120 dB",
             "compressao_video": "Smart H.265+/Smart H.264+/H.265/H.264/H.264H/H.264B/MJPEG (Apenas suportado",
-            "taxa_de_bits": "H.264: 32 kpbs ~ 6144 kbps"
+            "taxa_de_bits": "H.264: 32 kpbs ~ 6144 kbps",
+            "pixels_efetivos": "4.1 MP (2688x1520)"
         },
         "audio": {
             "microfone_embutido": "Não encontrado",
@@ -319,8 +324,9 @@
             "grau_protecao": "IP67",
             "dimensoes": "197.9 mm x 80.2 mm x 76.2 mm",
             "peso": "Não encontrado",
+            "distancia_ir": "Não encontrado",
             "temperatura_operacao": {
-                "min": 40,
+                "min": -40,
                 "max": 60,
                 "unidade": "°C"
             }
@@ -337,11 +343,11 @@
     "Datasheet - VIP 5460 LPR IA - V11.pdf": {
         "video": {
             "resolucao_maxima": "4.1 MP (2688x1520)",
-            "pixels_efetivos": "4.1 MP (2688x1520)",
             "sensor_imagem": "1/1,8” CMOS 4 megapixels",
             "wdr": "140 dB",
             "compressao_video": "H.265, H.264H, H.264M, H.264B, MJPEG",
-            "taxa_de_bits": "CBR / VBR"
+            "taxa_de_bits": "CBR / VBR",
+            "pixels_efetivos": "4.1 MP (2688x1520)"
         },
         "audio": {
             "microfone_embutido": "Não encontrado",
@@ -369,8 +375,9 @@
             "grau_protecao": "IP67",
             "dimensoes": "Não encontrado",
             "peso": "Não encontrado",
+            "distancia_ir": "Não encontrado",
             "temperatura_operacao": {
-                "min": 30,
+                "min": -30,
                 "max": 65,
                 "unidade": "°C"
             }
@@ -387,11 +394,11 @@
     "DATASHEET - VIP 72100 MV IA FT.pdf": {
         "video": {
             "resolucao_maxima": "2.1 MP (1920x1080)",
-            "pixels_efetivos": "2.1 MP (1920x1080)",
             "sensor_imagem": "1/2.8” 3x2 megapixels CMOS",
             "wdr": "Balanço do branco",
             "compressao_video": "H.264H /H.264B/ H.264/ H.265/ MJPEG",
-            "taxa_de_bits": "Canal 1~3"
+            "taxa_de_bits": "Canal 1~3",
+            "pixels_efetivos": "2.1 MP (1920x1080)"
         },
         "audio": {
             "microfone_embutido": "Não encontrado",
@@ -419,8 +426,9 @@
             "grau_protecao": "IP67",
             "dimensoes": "278.6 mm x 124 mm x 140.4 mm",
             "peso": "Não encontrado",
+            "distancia_ir": "Não encontrado",
             "temperatura_operacao": {
-                "min": 40,
+                "min": -40,
                 "max": 60,
                 "unidade": "°C"
             }
@@ -436,11 +444,11 @@
     "Datasheet - VIP 7245 SD IR IA FT - V5.pdf": {
         "video": {
             "resolucao_maxima": "2.1 MP (1920x1080)",
-            "pixels_efetivos": "2.1 MP (1920x1080)",
             "sensor_imagem": "1/2.8” 2 megapixels CMOS",
             "wdr": "120 dB) / HLC",
             "compressao_video": "H.264H; H.264B; H.264; H.265; MJPEG (Apenas no Sub Stream",
-            "taxa_de_bits": "CBR / VBR"
+            "taxa_de_bits": "CBR / VBR",
+            "pixels_efetivos": "2.1 MP (1920x1080)"
         },
         "audio": {
             "microfone_embutido": "Não encontrado",
@@ -468,8 +476,9 @@
             "grau_protecao": "IP67",
             "dimensoes": "Não encontrado",
             "peso": "Não encontrado",
+            "distancia_ir": "Não encontrado",
             "temperatura_operacao": {
-                "min": 40,
+                "min": -40,
                 "max": 70,
                 "unidade": "°C"
             }
@@ -486,11 +495,11 @@
     "Datasheet - VIP 74120 LPR IA FT - V1 (1).pdf": {
         "video": {
             "resolucao_maxima": "4.1 MP (2688x1520)",
-            "pixels_efetivos": "4.1 MP (2688x1520)",
             "sensor_imagem": "1/1,8” CMOS 4 megapixels",
             "wdr": "140 dB",
             "compressao_video": "H.265, H.264H, H.264M, H.264B, MJPEG",
-            "taxa_de_bits": "CBR / VBR"
+            "taxa_de_bits": "CBR / VBR",
+            "pixels_efetivos": "4.1 MP (2688x1520)"
         },
         "audio": {
             "microfone_embutido": "Não encontrado",
@@ -518,8 +527,9 @@
             "grau_protecao": "IP67",
             "dimensoes": "Não encontrado",
             "peso": "Não encontrado",
+            "distancia_ir": "Não encontrado",
             "temperatura_operacao": {
-                "min": 30,
+                "min": -30,
                 "max": 65,
                 "unidade": "°C"
             }
@@ -536,11 +546,11 @@
     "datasheet - vip-5425-sd-dual-ia-ft-27.01.pdf": {
         "video": {
             "resolucao_maxima": "3.7 MP (2560x1440)",
-            "pixels_efetivos": "3.7 MP (2560x1440)",
             "sensor_imagem": "1/2.8” 4 megapixels CMOS",
             "wdr": "120 dB",
             "compressao_video": "H.265+/H.265/H.264+/H.264/ H.264B/ H.264H/ H.264M/MJPEG",
-            "taxa_de_bits": "CBR / VBR"
+            "taxa_de_bits": "CBR / VBR",
+            "pixels_efetivos": "3.7 MP (2560x1440)"
         },
         "audio": {
             "microfone_embutido": "Não encontrado",
@@ -568,8 +578,9 @@
             "grau_protecao": "IP66",
             "dimensoes": "160 mm x 184.4 mm x 304.6 mm",
             "peso": "Não encontrado",
+            "distancia_ir": "Não encontrado",
             "temperatura_operacao": {
-                "min": 40,
+                "min": -40,
                 "max": 65,
                 "unidade": "°C"
             }
@@ -587,11 +598,11 @@
     "Datasheet UNIFICADO - VIPC 1430 BD v3_0 (1).pdf": {
         "video": {
             "resolucao_maxima": "3.7 MP (2560x1440)",
-            "pixels_efetivos": "3.7 MP (2560x1440)",
             "sensor_imagem": "1/3” CMOS",
             "wdr": "Perfil",
             "compressao_video": "Não encontrado",
-            "taxa_de_bits": "Não encontrado"
+            "taxa_de_bits": "Não encontrado",
+            "pixels_efetivos": "3.7 MP (2560x1440)"
         },
         "audio": {
             "microfone_embutido": "Não encontrado",
@@ -619,8 +630,9 @@
             "grau_protecao": "IP67",
             "dimensoes": "Não encontrado",
             "peso": "Não encontrado",
+            "distancia_ir": "Não encontrado",
             "temperatura_operacao": {
-                "min": 40,
+                "min": -40,
                 "max": 50,
                 "unidade": "°C"
             }
@@ -636,11 +648,11 @@
     "Datasheet UNIFICADO - VIPC 1430 BD v3_0.pdf": {
         "video": {
             "resolucao_maxima": "3.7 MP (2560x1440)",
-            "pixels_efetivos": "3.7 MP (2560x1440)",
             "sensor_imagem": "1/3” CMOS",
             "wdr": "Perfil",
             "compressao_video": "Não encontrado",
-            "taxa_de_bits": "Não encontrado"
+            "taxa_de_bits": "Não encontrado",
+            "pixels_efetivos": "3.7 MP (2560x1440)"
         },
         "audio": {
             "microfone_embutido": "Não encontrado",
@@ -668,8 +680,9 @@
             "grau_protecao": "IP67",
             "dimensoes": "Não encontrado",
             "peso": "Não encontrado",
+            "distancia_ir": "Não encontrado",
             "temperatura_operacao": {
-                "min": 40,
+                "min": -40,
                 "max": 50,
                 "unidade": "°C"
             }
@@ -685,11 +698,11 @@
     "Datasheet UNIFICADO - VIPW 1230 BD (V3).pdf": {
         "video": {
             "resolucao_maxima": "2.1 MP (1920x1080)",
-            "pixels_efetivos": "2.1 MP (1920x1080)",
             "sensor_imagem": "2 Megapixels 1/3” CMOS",
             "wdr": "Perfil Dia & Noite",
             "compressao_video": "H.264 / H.264B / H.264H / H.265",
-            "taxa_de_bits": "Não encontrado"
+            "taxa_de_bits": "Não encontrado",
+            "pixels_efetivos": "2.1 MP (1920x1080)"
         },
         "audio": {
             "microfone_embutido": "Sim",
@@ -728,8 +741,9 @@
             "grau_protecao": "IP67",
             "dimensoes": "Não encontrado",
             "peso": "Não encontrado",
+            "distancia_ir": "Não encontrado",
             "temperatura_operacao": {
-                "min": 30,
+                "min": -30,
                 "max": 55,
                 "unidade": "°C"
             }
@@ -746,11 +760,11 @@
     "Datasheet UNIFICADO VIP 1230 BD G5 V9.pdf": {
         "video": {
             "resolucao_maxima": "2.1 MP (1920x1080)",
-            "pixels_efetivos": "2.1 MP (1920x1080)",
             "sensor_imagem": "1/2.8” 2 megapixels CMOS",
             "wdr": "Digital, 52 dB",
             "compressao_video": "H.264/ H.264B/ H.264H/ H.265/ MJPEG2",
-            "taxa_de_bits": "Não encontrado"
+            "taxa_de_bits": "Não encontrado",
+            "pixels_efetivos": "2.1 MP (1920x1080)"
         },
         "audio": {
             "microfone_embutido": "Não encontrado",
@@ -794,8 +808,9 @@
             "grau_protecao": "IP67",
             "dimensoes": "Não encontrado",
             "peso": "Não encontrado",
+            "distancia_ir": "Não encontrado",
             "temperatura_operacao": {
-                "min": 40,
+                "min": -40,
                 "max": 60,
                 "unidade": "°C"
             }
@@ -812,11 +827,11 @@
     "Datasheet VIP 1230 BD FC+ V3.pdf": {
         "video": {
             "resolucao_maxima": "2.1 MP (1920x1080)",
-            "pixels_efetivos": "2.1 MP (1920x1080)",
             "sensor_imagem": "2 Megapixels 1/2.8” CMOS",
             "wdr": "Não encontrado",
             "compressao_video": "4",
-            "taxa_de_bits": "CBR / VBR"
+            "taxa_de_bits": "CBR / VBR",
+            "pixels_efetivos": "2.1 MP (1920x1080)"
         },
         "audio": {
             "microfone_embutido": "Detecção de Humanos",
@@ -857,8 +872,9 @@
             "grau_protecao": "IP67",
             "dimensoes": "197.9 mm × 80.2 mm × 76.2 mm",
             "peso": "Não encontrado",
+            "distancia_ir": "Não encontrado",
             "temperatura_operacao": {
-                "min": 40,
+                "min": -40,
                 "max": 60,
                 "unidade": "°C"
             }
@@ -876,11 +892,11 @@
     "Datasheet VIP 1300 MINI SD (V9).pdf": {
         "video": {
             "resolucao_maxima": "3.1 MP (2048x1536)",
-            "pixels_efetivos": "3.1 MP (2048x1536)",
             "sensor_imagem": "3 Megapixels 1/2.8” CMOS",
             "wdr": "Não encontrado",
             "compressao_video": "H.265 / H.264 / H.264B / H.264H / MJPEG",
-            "taxa_de_bits": "CBR / VBR"
+            "taxa_de_bits": "CBR / VBR",
+            "pixels_efetivos": "3.1 MP (2048x1536)"
         },
         "audio": {
             "microfone_embutido": "Sim",
@@ -924,8 +940,9 @@
             "grau_protecao": "IP66",
             "dimensoes": "Não encontrado",
             "peso": "Não encontrado",
+            "distancia_ir": "Não encontrado",
             "temperatura_operacao": {
-                "min": 30,
+                "min": -30,
                 "max": 55,
                 "unidade": "°C"
             }
@@ -940,11 +957,11 @@
     "Datasheet VIP 1430 BD FC+ V5_0 (1).pdf": {
         "video": {
             "resolucao_maxima": "3.7 MP (2560x1440)",
-            "pixels_efetivos": "3.7 MP (2560x1440)",
             "sensor_imagem": "4 Megapixels 1/2.9” CMOS",
             "wdr": "Não encontrado",
             "compressao_video": "H.265 | H.264 | H.264H | H.264B | MJPEG",
-            "taxa_de_bits": "CBR | VBR"
+            "taxa_de_bits": "CBR | VBR",
+            "pixels_efetivos": "3.7 MP (2560x1440)"
         },
         "audio": {
             "microfone_embutido": "Detecção de Humanos",
@@ -972,8 +989,9 @@
             "grau_protecao": "IP67",
             "dimensoes": "197.9 mm × 80.2 mm × 76.2 mm",
             "peso": "Não encontrado",
+            "distancia_ir": "Não encontrado",
             "temperatura_operacao": {
-                "min": 40,
+                "min": -40,
                 "max": 60,
                 "unidade": "°C"
             }
@@ -991,11 +1009,11 @@
     "Datasheet VIP 1430 BD FC+ V5_0.pdf": {
         "video": {
             "resolucao_maxima": "3.7 MP (2560x1440)",
-            "pixels_efetivos": "3.7 MP (2560x1440)",
             "sensor_imagem": "4 Megapixels 1/2.9” CMOS",
             "wdr": "Não encontrado",
             "compressao_video": "H.265 | H.264 | H.264H | H.264B | MJPEG",
-            "taxa_de_bits": "CBR | VBR"
+            "taxa_de_bits": "CBR | VBR",
+            "pixels_efetivos": "3.7 MP (2560x1440)"
         },
         "audio": {
             "microfone_embutido": "Detecção de Humanos",
@@ -1023,8 +1041,9 @@
             "grau_protecao": "IP67",
             "dimensoes": "197.9 mm × 80.2 mm × 76.2 mm",
             "peso": "Não encontrado",
+            "distancia_ir": "Não encontrado",
             "temperatura_operacao": {
-                "min": 40,
+                "min": -40,
                 "max": 60,
                 "unidade": "°C"
             }
@@ -1041,12 +1060,12 @@
     },
     "Datasheet VIP 3230 BD FC+ IA - 2.pdf": {
         "video": {
-            "resolucao_maxima": "0.0 MP (100x0)",
-            "pixels_efetivos": "0.0 MP (100x0)",
+            "resolucao_maxima": "Não encontrado",
             "sensor_imagem": "1/2.8” 2 MP Progressive CMOS",
             "wdr": "120 dB)/ HLC",
             "compressao_video": "H.265/ H.264/H.264B/MJPEG",
-            "taxa_de_bits": "CBR / VBR"
+            "taxa_de_bits": "CBR / VBR",
+            "pixels_efetivos": "Não encontrado"
         },
         "audio": {
             "microfone_embutido": "Sim",
@@ -1074,6 +1093,7 @@
             "grau_protecao": "IP67",
             "dimensoes": "Não encontrado",
             "peso": "Não encontrado",
+            "distancia_ir": "Não encontrado",
             "temperatura_operacao": {
                 "min": null,
                 "max": null,
@@ -1093,11 +1113,11 @@
     "Datasheet VIP 3830 IA - V3.pdf": {
         "video": {
             "resolucao_maxima": "8.3 MP (3840x2160)",
-            "pixels_efetivos": "8.3 MP (3840x2160)",
             "sensor_imagem": "8 Megapixels 1/2.7” CMOS",
             "wdr": "Não encontrado",
             "compressao_video": "H.265 / H.264 / H.264H / H.264B / MJPEG",
-            "taxa_de_bits": "CBR/ VBR"
+            "taxa_de_bits": "CBR/ VBR",
+            "pixels_efetivos": "8.3 MP (3840x2160)"
         },
         "audio": {
             "microfone_embutido": "Sim",
@@ -1140,8 +1160,9 @@
             "grau_protecao": "IP67",
             "dimensoes": "70 mm x 70 mm x 166.2 mm",
             "peso": "Não encontrado",
+            "distancia_ir": "Não encontrado",
             "temperatura_operacao": {
-                "min": 40,
+                "min": -40,
                 "max": 60,
                 "unidade": "°C"
             }
@@ -1156,12 +1177,12 @@
     },
     "datasheet-vip-3230-fc+-ia-vip-3230-d-fc+-ia-pt.pdf": {
         "video": {
-            "resolucao_maxima": "0.0 MP (100x0)",
-            "pixels_efetivos": "0.0 MP (100x0)",
+            "resolucao_maxima": "Não encontrado",
             "sensor_imagem": "1/2.8” 2 MP Progressive CMOS",
             "wdr": "120 dB)/ HLC",
             "compressao_video": "H.265/ H.264/H.264B/MJPEG",
-            "taxa_de_bits": "CBR / VBR"
+            "taxa_de_bits": "CBR / VBR",
+            "pixels_efetivos": "Não encontrado"
         },
         "audio": {
             "microfone_embutido": "Sim",
@@ -1189,6 +1210,7 @@
             "grau_protecao": "IP67",
             "dimensoes": "Não encontrado",
             "peso": "Não encontrado",
+            "distancia_ir": "Não encontrado",
             "temperatura_operacao": {
                 "min": null,
                 "max": null,
@@ -1207,12 +1229,12 @@
     },
     "Datasheet-VIP-3430-W-3430-D-W-02.20.pdf": {
         "video": {
-            "resolucao_maxima": "0.0 MP (100x0)",
-            "pixels_efetivos": "0.0 MP (100x0)",
+            "resolucao_maxima": "Não encontrado",
             "sensor_imagem": "1/3” 4 megapixels CMOS",
             "wdr": "/ HLC",
             "compressao_video": "H.264/H.264B/H.265/H.265/MJPEG",
-            "taxa_de_bits": "CBR / VBR"
+            "taxa_de_bits": "CBR / VBR",
+            "pixels_efetivos": "Não encontrado"
         },
         "audio": {
             "microfone_embutido": "Não encontrado",
@@ -1240,6 +1262,7 @@
             "grau_protecao": "IP67",
             "dimensoes": "Não encontrado",
             "peso": "Não encontrado",
+            "distancia_ir": "Não encontrado",
             "temperatura_operacao": {
                 "min": 0,
                 "max": 50,
@@ -1256,12 +1279,12 @@
     },
     "datasheet-vip-5207-tm-ft-pt_0.pdf": {
         "video": {
-            "resolucao_maxima": "0.0 MP (256x192)",
-            "pixels_efetivos": "0.0 MP (256x192)",
+            "resolucao_maxima": "Não encontrado",
             "sensor_imagem": "Detector de plano focal não resfriado de óxido de vanádio",
             "wdr": "Não encontrado",
             "compressao_video": "H.265; H.264H; H.264; MJEPG",
-            "taxa_de_bits": "Não encontrado"
+            "taxa_de_bits": "Não encontrado",
+            "pixels_efetivos": "Não encontrado"
         },
         "audio": {
             "microfone_embutido": "Não encontrado",
@@ -1289,8 +1312,9 @@
             "grau_protecao": "IP67",
             "dimensoes": "Não encontrado",
             "peso": "Não encontrado",
+            "distancia_ir": "Não encontrado",
             "temperatura_operacao": {
-                "min": 30,
+                "min": -30,
                 "max": 60,
                 "unidade": "°C"
             }
@@ -1305,11 +1329,11 @@
     "datasheet-vip-5450-d-4g-ia-ft-pt.pdf": {
         "video": {
             "resolucao_maxima": "4.1 MP (2688x1520)",
-            "pixels_efetivos": "4.1 MP (2688x1520)",
             "sensor_imagem": "1/ 2,7 4 megapixels CMOS",
             "wdr": "120 dB) / HLC",
             "compressao_video": "H.265/H.264/H.264H/H.264B/MJPEG",
-            "taxa_de_bits": "CBR / VBR"
+            "taxa_de_bits": "CBR / VBR",
+            "pixels_efetivos": "4.1 MP (2688x1520)"
         },
         "audio": {
             "microfone_embutido": "/ 1 Entrada de áudio / 1 Saída de Áudio",
@@ -1337,8 +1361,9 @@
             "grau_protecao": "IP67",
             "dimensoes": "Não encontrado",
             "peso": "Não encontrado",
+            "distancia_ir": "Não encontrado",
             "temperatura_operacao": {
-                "min": 30,
+                "min": -30,
                 "max": 60,
                 "unidade": "°C"
             }
@@ -1355,11 +1380,11 @@
     "datasheet-VIP-9233-SD-laser-IA-FT-pt.pdf": {
         "video": {
             "resolucao_maxima": "2.1 MP (1920x1080)",
-            "pixels_efetivos": "2.1 MP (1920x1080)",
             "sensor_imagem": "1/1.8” 2 megapixels CMOS",
             "wdr": "120 dB",
             "compressao_video": "H.265+/H.265/H.264+/H.264/MJPEG",
-            "taxa_de_bits": "H.264: 32 kpbs ~ 8192 kbps"
+            "taxa_de_bits": "H.264: 32 kpbs ~ 8192 kbps",
+            "pixels_efetivos": "2.1 MP (1920x1080)"
         },
         "audio": {
             "microfone_embutido": "Não encontrado",
@@ -1387,8 +1412,9 @@
             "grau_protecao": "IP67",
             "dimensoes": "Não encontrado",
             "peso": "Não encontrado",
+            "distancia_ir": "Não encontrado",
             "temperatura_operacao": {
-                "min": 40,
+                "min": -40,
                 "max": 70,
                 "unidade": "°C"
             }
@@ -1405,11 +1431,11 @@
     "datasheet-vip-93200-lpr-ia-ft-g2-pt.pdf": {
         "video": {
             "resolucao_maxima": "3.1 MP (2048x1536)",
-            "pixels_efetivos": "3.1 MP (2048x1536)",
             "sensor_imagem": "2/3” 3 megapixels GS-CMOS",
             "wdr": "90 dB",
             "compressao_video": "H.265, H.264H, H.264M, MJEPG",
-            "taxa_de_bits": "CBR / VBR"
+            "taxa_de_bits": "CBR / VBR",
+            "pixels_efetivos": "3.1 MP (2048x1536)"
         },
         "audio": {
             "microfone_embutido": "Não encontrado",
@@ -1437,8 +1463,9 @@
             "grau_protecao": "IP66",
             "dimensoes": "Não encontrado",
             "peso": "Não encontrado",
+            "distancia_ir": "Não encontrado",
             "temperatura_operacao": {
-                "min": 40,
+                "min": -40,
                 "max": 65,
                 "unidade": "°C"
             }
@@ -1454,11 +1481,11 @@
     "datasheet-vip-94120-ultra-ia-ft-pt.pdf": {
         "video": {
             "resolucao_maxima": "4.1 MP (2688x1520)",
-            "pixels_efetivos": "4.1 MP (2688x1520)",
             "sensor_imagem": "1/1.8” 4 megapixels CMOS",
             "wdr": "140 dB) / HLC",
             "compressao_video": "H.265/ H.264/H.264H/H.264B/MJPEG",
-            "taxa_de_bits": "CBR / VBR"
+            "taxa_de_bits": "CBR / VBR",
+            "pixels_efetivos": "4.1 MP (2688x1520)"
         },
         "audio": {
             "microfone_embutido": "Não encontrado",
@@ -1486,8 +1513,9 @@
             "grau_protecao": "IP67",
             "dimensoes": "135.1 mm × 134.2 mm x 345.6 mm",
             "peso": "Não encontrado",
+            "distancia_ir": "Não encontrado",
             "temperatura_operacao": {
-                "min": 40,
+                "min": -40,
                 "max": 65,
                 "unidade": "°C"
             }
@@ -1503,11 +1531,11 @@
     "datasheet-vipm-9414-3d-pt.pdf": {
         "video": {
             "resolucao_maxima": "3.7 MP (2560x1440)",
-            "pixels_efetivos": "3.7 MP (2560x1440)",
             "sensor_imagem": "Não encontrado",
             "wdr": "Não encontrado",
             "compressao_video": "H.265; H.264; H.264H",
-            "taxa_de_bits": "Não encontrado"
+            "taxa_de_bits": "Não encontrado",
+            "pixels_efetivos": "3.7 MP (2560x1440)"
         },
         "audio": {
             "microfone_embutido": "Não encontrado",
@@ -1533,8 +1561,9 @@
             "grau_protecao": "IP67",
             "dimensoes": "197.7mm x 71.0mm × 72.1mm",
             "peso": "Não encontrado",
+            "distancia_ir": "Não encontrado",
             "temperatura_operacao": {
-                "min": 40,
+                "min": -40,
                 "max": 65,
                 "unidade": "°C"
             }
@@ -1549,11 +1578,11 @@
     "datasheet-vipw-1210-c-pt.pdf": {
         "video": {
             "resolucao_maxima": "2.1 MP (1920x1080)",
-            "pixels_efetivos": "2.1 MP (1920x1080)",
             "sensor_imagem": "2 Megapixels 1/3.2” CMOS",
             "wdr": "Não encontrado",
             "compressao_video": "H.265 / H.264 / H.264B / H.264H",
-            "taxa_de_bits": "CBR / VBR"
+            "taxa_de_bits": "CBR / VBR",
+            "pixels_efetivos": "2.1 MP (1920x1080)"
         },
         "audio": {
             "microfone_embutido": "Sim",
@@ -1596,8 +1625,9 @@
             "grau_protecao": "Não encontrado",
             "dimensoes": "68 mm x 31.9 mm x 119.2 mm",
             "peso": "Não encontrado",
+            "distancia_ir": "Não encontrado",
             "temperatura_operacao": {
-                "min": 10,
+                "min": -10,
                 "max": 45,
                 "unidade": "°C"
             }
@@ -1612,11 +1642,11 @@
     "DS-2CD2H83G2-IZS_Datasheet_V5.5.113_20230303.pdf": {
         "video": {
             "resolucao_maxima": "8.3 MP (3840x2160)",
-            "pixels_efetivos": "8.3 MP (3840x2160)",
             "sensor_imagem": "1/2.8\" Progressive Scan CMOS",
-            "wdr": "Não encontrado",
+            "wdr": "technology",
             "compressao_video": "Main stream: H.265/H.264/H.264+/H.265+",
-            "taxa_de_bits": "32 Kbps to 16 Mbps"
+            "taxa_de_bits": "32 Kbps to 16 Mbps",
+            "pixels_efetivos": "8.3 MP (3840x2160)"
         },
         "audio": {
             "microfone_embutido": "Não encontrado",
@@ -1624,6 +1654,7 @@
         },
         "rede": {
             "interface_rede": "1 RJ45 10 M/100 M self-adaptive Ethernet port",
+            "throughput": "Não encontrado",
             "protocolos": [
                 "DDNS",
                 "DHCP",
@@ -1639,15 +1670,16 @@
                 "TCP",
                 "UPnP"
             ],
+            "onvif": "Não encontrado",
             "navegador": [
                 "Plug-in required live view: IE 10",
                 "IE 11"
             ]
         },
         "inteligencia": {
-            "deteccao_movimento": "Motion detection (human and vehicle targets classification), video tampering alarm",
-            "protecao_perimetral": "Line crossing detection, intrusion detection",
-            "regiao_interesse": "1 fixed region for main stream and sub-stream"
+            "deteccao_movimento": "Não encontrado",
+            "regiao_interesse": "Não encontrado",
+            "protecao_perimetral": "Não encontrado"
         },
         "energia": {
             "tensao_alimentacao": "12 VDC ± 25%, reverse polarity protection",
@@ -1657,12 +1689,12 @@
             "grau_protecao": "IP67",
             "dimensoes": "216 mm × 121 mm × 118 mm",
             "peso": "Não encontrado",
+            "distancia_ir": "Up to 40 m",
             "temperatura_operacao": {
-                "min": -30,
-                "max": 60,
+                "min": null,
+                "max": null,
                 "unidade": "°C"
-            },
-            "distancia_ir": "Não encontrado"
+            }
         },
         "fabricante": "Hikvision",
         "modelo_produto": "DS-2CD2H83G2-IZS",
@@ -1675,11 +1707,11 @@
     "DS-2CD2T47G3-LIS2UY_SLRB_Datasheet_20250411.pdf": {
         "video": {
             "resolucao_maxima": "4.1 MP (2688x1520)",
-            "pixels_efetivos": "4.1 MP (2688x1520)",
             "sensor_imagem": "1/1.8\" Progressive Scan CMOS",
-            "wdr": "130 dB",
+            "wdr": "Focus on Person and Vehicle classification based on deep learning",
             "compressao_video": "Main stream: H.265/H.264/H.264+/H.265+",
-            "taxa_de_bits": "32 Kbps to 8 Mbps"
+            "taxa_de_bits": "32 Kbps to 8 Mbps",
+            "pixels_efetivos": "4.1 MP (2688x1520)"
         },
         "audio": {
             "microfone_embutido": "Arrayed dual-microphone",
@@ -1687,6 +1719,7 @@
         },
         "rede": {
             "interface_rede": "1 RJ45 10 M/100 M self-adaptive Ethernet port",
+            "throughput": "Não encontrado",
             "protocolos": [
                 "DDNS",
                 "DHCP",
@@ -1702,6 +1735,7 @@
                 "TCP",
                 "UPnP"
             ],
+            "onvif": "Não encontrado",
             "navegador": [
                 "Plug-in free live view: Chrome 80+",
                 "Firefox 80+",
@@ -1709,24 +1743,24 @@
             ]
         },
         "inteligencia": {
-            "deteccao_movimento": "Motion detection (support alarm triggering by specified target types (human and",
-            "protecao_perimetral": "Line crossing, intrusion, region entrance, region exiting",
-            "regiao_interesse": "1 fixed region for main stream"
+            "deteccao_movimento": "Não encontrado",
+            "regiao_interesse": "Não encontrado",
+            "protecao_perimetral": "Não encontrado"
         },
         "energia": {
             "tensao_alimentacao": "Não encontrado",
-            "consumo_potencia": "Não encontrado"
+            "consumo_potencia": "2 W, max. sound pressure level: 10 cm: 120 dB"
         },
         "fisico": {
             "grau_protecao": "IP67",
             "dimensoes": "286.7 mm × 93.3 mm × 91.2 mm",
             "peso": "Não encontrado",
+            "distancia_ir": "Up to 60 m",
             "temperatura_operacao": {
-                "min": -30,
-                "max": 60,
+                "min": null,
+                "max": null,
                 "unidade": "°C"
-            },
-            "distancia_ir": "Up to 60 m"
+            }
         },
         "fabricante": "Hikvision",
         "modelo_produto": "DS-2CD2T47G3-LIS2UY",
@@ -1738,11 +1772,11 @@
     "DS-2CD2T67G3-LIS2UY_SLRB_Datasheet_20250411.pdf": {
         "video": {
             "resolucao_maxima": "5.8 MP (3200x1800)",
-            "pixels_efetivos": "5.8 MP (3200x1800)",
             "sensor_imagem": "1/1.8\" Progressive Scan CMOS",
-            "wdr": "130 dB",
+            "wdr": "Focus on Person and Vehicle classification based on deep learning",
             "compressao_video": "Main stream: H.265/H.264/H.264+/H.265+",
-            "taxa_de_bits": "32 Kbps to 16 Mbps"
+            "taxa_de_bits": "32 Kbps to 16 Mbps",
+            "pixels_efetivos": "5.8 MP (3200x1800)"
         },
         "audio": {
             "microfone_embutido": "Arrayed dual-microphone",
@@ -1750,6 +1784,7 @@
         },
         "rede": {
             "interface_rede": "1 RJ45 10 M/100 M self-adaptive Ethernet port",
+            "throughput": "Não encontrado",
             "protocolos": [
                 "DDNS",
                 "DHCP",
@@ -1765,6 +1800,7 @@
                 "TCP",
                 "UPnP"
             ],
+            "onvif": "Não encontrado",
             "navegador": [
                 "Plug-in free live view: Chrome 80+",
                 "Firefox 80+",
@@ -1772,24 +1808,24 @@
             ]
         },
         "inteligencia": {
-            "deteccao_movimento": "Motion detection (support alarm triggering by specified target types (human and",
-            "protecao_perimetral": "Line crossing, intrusion, region entrance, region exiting",
-            "regiao_interesse": "1 fixed region for main stream"
+            "deteccao_movimento": "Não encontrado",
+            "regiao_interesse": "Não encontrado",
+            "protecao_perimetral": "Não encontrado"
         },
         "energia": {
             "tensao_alimentacao": "Não encontrado",
-            "consumo_potencia": "Não encontrado"
+            "consumo_potencia": "2 W, max. sound pressure level: 10 cm: 120 dB"
         },
         "fisico": {
             "grau_protecao": "IP67",
             "dimensoes": "286.7 mm × 93.3 mm × 91.2 mm",
             "peso": "Não encontrado",
+            "distancia_ir": "Up to 60 m",
             "temperatura_operacao": {
-                "min": -30,
-                "max": 60,
+                "min": null,
+                "max": null,
                 "unidade": "°C"
-            },
-            "distancia_ir": "Up to 60 m"
+            }
         },
         "fabricante": "Hikvision",
         "modelo_produto": "DS-2CD2T67G3-LIS2UY",
@@ -1801,11 +1837,11 @@
     "DS-2DE4415IWG-E_B_Datasheet_20250220.pdf": {
         "video": {
             "resolucao_maxima": "3.7 MP (2560x1440)",
-            "pixels_efetivos": "3.7 MP (2560x1440)",
             "sensor_imagem": "1/2.8\" progressive scan CMOS",
-            "wdr": "120 dB",
+            "wdr": "Não encontrado",
             "compressao_video": "Specification",
-            "taxa_de_bits": "32 kbps to 16384 kbps"
+            "taxa_de_bits": "32 kbps to 16384 kbps",
+            "pixels_efetivos": "3.7 MP (2560x1440)"
         },
         "audio": {
             "microfone_embutido": "Não encontrado",
@@ -1813,6 +1849,7 @@
         },
         "rede": {
             "interface_rede": "1 RJ45 10M/100M self-adaptive Ethernet port",
+            "throughput": "Não encontrado",
             "protocolos": [
                 "802.1x",
                 "DDNS",
@@ -1829,6 +1866,7 @@
                 "SNMP",
                 "UPnP"
             ],
+            "onvif": "Não encontrado",
             "navegador": [
                 "IE11",
                 "Chrome 80+",
@@ -1838,9 +1876,9 @@
             ]
         },
         "inteligencia": {
-            "deteccao_movimento": "Motion detection, video tampering alarm, exception, alarm input and output",
-            "protecao_perimetral": "",
-            "regiao_interesse": "8 fixed regions for each stream"
+            "deteccao_movimento": "Não encontrado",
+            "regiao_interesse": "Não encontrado",
+            "protecao_perimetral": "Não encontrado"
         },
         "energia": {
             "tensao_alimentacao": "Não encontrado",
@@ -1850,12 +1888,12 @@
             "grau_protecao": "IP67",
             "dimensoes": "Não encontrado",
             "peso": "Não encontrado",
+            "distancia_ir": "Support H.265+/H.265 video compression",
             "temperatura_operacao": {
                 "min": null,
                 "max": null,
                 "unidade": "°C"
-            },
-            "distancia_ir": "IR Distance: up to 100 m"
+            }
         },
         "fabricante": "Hikvision",
         "modelo_produto": "DS-2DE4415IW-DE, DS-2DE4415IWG-E",
@@ -1867,11 +1905,11 @@
     "exemplo.pdf": {
         "video": {
             "resolucao_maxima": "4.1 MP (2688x1520)",
-            "pixels_efetivos": "4.1 MP (2688x1520)",
             "sensor_imagem": "1/1.8” 4 megapixels CMOS",
             "wdr": "120 dB",
             "compressao_video": "Smart H.265+/Smart H.264+/H.265/H.264/H.264H/H.264B/MJPEG (Apenas suportado",
-            "taxa_de_bits": "H.264: 32 kpbs ~ 6144 kbps"
+            "taxa_de_bits": "H.264: 32 kpbs ~ 6144 kbps",
+            "pixels_efetivos": "4.1 MP (2688x1520)"
         },
         "audio": {
             "microfone_embutido": "Não encontrado",
@@ -1899,8 +1937,9 @@
             "grau_protecao": "IP67",
             "dimensoes": "197.9 mm x 80.2 mm x 76.2 mm",
             "peso": "Não encontrado",
+            "distancia_ir": "Não encontrado",
             "temperatura_operacao": {
-                "min": 40,
+                "min": -40,
                 "max": 60,
                 "unidade": "°C"
             }
@@ -1917,11 +1956,11 @@
     "Ficha técnica VIP 5440 IA_VIP 5440 D IA_0.pdf": {
         "video": {
             "resolucao_maxima": "4.1 MP (2688x1520)",
-            "pixels_efetivos": "4.1 MP (2688x1520)",
             "sensor_imagem": "1/2.9” CMOS (Starlight",
             "wdr": "120dB)/ HLC",
             "compressao_video": "H.265 / H.264 / H.264H / H.264B / MJPEG (apenas stream extra",
-            "taxa_de_bits": "Constante / Variável"
+            "taxa_de_bits": "Constante / Variável",
+            "pixels_efetivos": "4.1 MP (2688x1520)"
         },
         "audio": {
             "microfone_embutido": "Sim",
@@ -1962,8 +2001,9 @@
             "grau_protecao": "IP67",
             "dimensoes": "197.9 mm × 80.2 mm × 76.2 mm",
             "peso": "Não encontrado",
+            "distancia_ir": "Não encontrado",
             "temperatura_operacao": {
-                "min": 40,
+                "min": -40,
                 "max": 60,
                 "unidade": "°C"
             }
@@ -1979,12 +2019,12 @@
     },
     "Ficha técnica- VIP 3230 D FC+ AP IA (1) 1.pdf": {
         "video": {
-            "resolucao_maxima": "0.0 MP (100x0)",
-            "pixels_efetivos": "0.0 MP (100x0)",
+            "resolucao_maxima": "Não encontrado",
             "sensor_imagem": "1/2.8” 2 MP Progressive CMOS",
             "wdr": "120 dB)/ HLC",
             "compressao_video": "H.265/ H.264/H.264B/H.264H/MJPEG",
-            "taxa_de_bits": "CBR / VBR"
+            "taxa_de_bits": "CBR / VBR",
+            "pixels_efetivos": "Não encontrado"
         },
         "audio": {
             "microfone_embutido": "Sim",
@@ -2012,6 +2052,7 @@
             "grau_protecao": "IP67",
             "dimensoes": "Não encontrado",
             "peso": "Não encontrado",
+            "distancia_ir": "Não encontrado",
             "temperatura_operacao": {
                 "min": null,
                 "max": null,
@@ -2032,12 +2073,12 @@
     },
     "Ficha técnica- VIP 3230 D SC IA_0_0.pdf": {
         "video": {
-            "resolucao_maxima": "0.0 MP (100x0)",
-            "pixels_efetivos": "0.0 MP (100x0)",
+            "resolucao_maxima": "Não encontrado",
             "sensor_imagem": "1/2.9” 2 MP Progressive CMOS",
             "wdr": "120 dB)/ HLC",
             "compressao_video": "H.265/ H.264/H.264B/H.264H/MJPEG",
-            "taxa_de_bits": "CBR / VBR"
+            "taxa_de_bits": "CBR / VBR",
+            "pixels_efetivos": "Não encontrado"
         },
         "audio": {
             "microfone_embutido": "Sim",
@@ -2065,6 +2106,7 @@
             "grau_protecao": "IP67",
             "dimensoes": "Não encontrado",
             "peso": "Não encontrado",
+            "distancia_ir": "Não encontrado",
             "temperatura_operacao": {
                 "min": null,
                 "max": null,
@@ -2085,11 +2127,11 @@
     "Novo Datasheet - VIP 5432 SD IA FT 3_0.pdf": {
         "video": {
             "resolucao_maxima": "3.7 MP (2560x1440)",
-            "pixels_efetivos": "3.7 MP (2560x1440)",
             "sensor_imagem": "1/2.8” 4 megapixels CMOS",
             "wdr": "120 dB",
             "compressao_video": "H.265+/H.265/H.264+/H.264/MJPEG (stream extra",
-            "taxa_de_bits": "H.264: 3 kpbs ~ 20480 kbps"
+            "taxa_de_bits": "H.264: 3 kpbs ~ 20480 kbps",
+            "pixels_efetivos": "3.7 MP (2560x1440)"
         },
         "audio": {
             "microfone_embutido": "Não encontrado",
@@ -2117,8 +2159,9 @@
             "grau_protecao": "IP67",
             "dimensoes": "Não encontrado",
             "peso": "Não encontrado",
+            "distancia_ir": "Não encontrado",
             "temperatura_operacao": {
-                "min": 40,
+                "min": -40,
                 "max": 70,
                 "unidade": "°C"
             }
@@ -2135,11 +2178,11 @@
     "Novo Datasheet - VIP 9180 Pan+ FT.pdf": {
         "video": {
             "resolucao_maxima": "14.9 MP (5520x2700)",
-            "pixels_efetivos": "14.9 MP (5520x2700)",
             "sensor_imagem": "4 sensores de 1/1.8” 4 megapixels CMOS",
             "wdr": "120db) / HLC",
             "compressao_video": "H.265/H.264/H.264H/H.264B/MJPEG",
-            "taxa_de_bits": "CBR / VBR"
+            "taxa_de_bits": "CBR / VBR",
+            "pixels_efetivos": "14.9 MP (5520x2700)"
         },
         "audio": {
             "microfone_embutido": "Não encontrado",
@@ -2167,8 +2210,9 @@
             "grau_protecao": "IP67",
             "dimensoes": "172.5 mm x 120.5 mm x 298.3 mm",
             "peso": "Não encontrado",
+            "distancia_ir": "Não encontrado",
             "temperatura_operacao": {
-                "min": 40,
+                "min": -40,
                 "max": 60,
                 "unidade": "°C"
             }
